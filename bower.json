@@ -1,0 +1,23 @@
+{
+  "name": "louismazel.github.io",
+  "homepage": "https://louismazel.github.io",
+  "authors": [
+    "Mazel"
+  ],
+  "description": "resume & portofolio siteweb",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "loic",
+    "mazuel",
+    "developpeur",
+    "freelance",
+    "création",
+    "site",
+    "web"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "materialize": "^0.97.7"
+  }
+}
