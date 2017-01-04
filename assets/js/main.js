@@ -3,8 +3,8 @@
     function resizeHead () {
       var headerContainer = $('.headContainer');
       var windowHeight = $(window).height();
-      var navHeight = $('nav').height();
-      headerContainer.height(windowHeight - navHeight);
+      //var navHeight = $('nav').height();
+      headerContainer.height(windowHeight);
     }
     resizeHead();
     $( window ).resize(function() {

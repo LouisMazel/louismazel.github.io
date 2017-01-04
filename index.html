@@ -16,7 +16,7 @@
     <link href="assets/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-<nav class="grey lighten-5" role="navigation">
+<!-- <nav class="grey lighten-5" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="/" class="brand-logo">Loïc Mazuel</a>
         <ul class="right hide-on-med-and-down">
@@ -28,44 +28,52 @@
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-</nav>
+</nav> -->
 
-<div id="index-banner" class="parallax-container headContainer valign-wrapper">
+<div id="index-banner" class="parallax-container headContainer valign-wrapper" style="background-color: rgba(0,0,0,0.45);">
+    <nav  role="navigation" style="position: absolute;top: 0;width: 100%; background: transparent; box-shadow:none;">
+        <div class="nav-wrapper container">
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#about" class="js-scrollTo white-text">À propos</a></li>
+                <li><a href="#competences" class="js-scrollTo white-text">Compétences</a></li>
+                <li><a href="#experiences" class="js-scrollTo white-text">Expériences</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#about" class="js-scrollTo">À propos</a></li>
+                <li><a href="#competences" class="js-scrollTo">Compétences</a></li>
+                <li><a href="#experiences" class="js-scrollTo">Expériences</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse grey-text text-darken-4"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
     <div class="valign">
         <div class="section no-pad-bot">
             <div class="container">
-                <h1 class="header center teal-text text-lighten-2">Développeur Web - Freelance</h1>
+                <h1 class="header center">Loïc Mazuel</h1>
+                <h2 class="header center">Développeur Web - Freelance</h2>
                 <div class="row center">
                     <h5 class="header col s12 light">Réalisation de site web | Wordpress | AngularJS | Application Mobile</h5>
                 </div>
                 <div class="row center">
-                    <a href="#about" id="download-button" class="btn-large waves-effect waves-light teal lighten-1 js-scrollTo">En savoir plus</a>
+                    <a href="#about" id="download-button" class="btn-large waves-effect waves-light grey darken-4 js-scrollTo">En savoir plus</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="parallax"><img src="./assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="./assets/img/home-loic-mazuel.jpg" alt="Unsplashed background img 1"></div>
 </div>
-<!--<div class="section-call-to-area">-->
-    <!--<div class="container">-->
-        <!--<div class="row">-->
-            <!--<a href="#about" class="btn-floating btn-large button-middle call-to-about section-call-to-btn animated btn-show" data-section="#about">-->
-                <!--<i class="material-icons">expand_more</i>-->
-            <!--</a>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
 
 
 <div class="container">
-    <section id="about" class="scroll-section root-sec padd-tb-60  about-wrap">
+    <section id="about" class="scroll-section root-sec padd-tb-60 about-wrap">
         <div class="about-inner">
             <div class="row">
 
                 <div class="col s12 m4">
                     <div class="person-about">
-                        <h3 class="about-subtitle teal-text text-lighten-2">My Story</h3>
+                        <h3 class="about-subtitle grey-text text-darken-4">À propos</h3>
                         <p class="light">
                             Passionné depuis toujours par le secteur du web, je suis aujourd'hui un développeur autodidacte.
                             <br>
@@ -73,7 +81,7 @@
                             <br>
                             La réalisation d'applications mobiles, de sites web vitrine et de sites web plus complexes dans le cadre professionnel me permet aujourd'hui de mettre mes compétences à votre disposition.
                         </p>
-                        <a class="waves-effect waves-light btn-large brand-bg white-text" target="_blank" href="assets/img/CV-loic-mazuel.pdf"><i class="material-icons left">archive</i> Download Resume</a>
+                        <a class="waves-effect waves-light btn-large brand-bg grey darken-4 white-text" target="_blank" href="assets/img/CV-loic-mazuel.pdf"><i class="material-icons left">archive</i> CV</a>
                     </div>
                 </div>
                 <!-- about me description -->
@@ -87,30 +95,31 @@
 
                 <div class="col s12 m4">
                     <div class="person-info">
-                        <h3 class="about-subtitle teal-text text-lighten-2">Personal Information</h3>
-                        <h5 class="light"><span>Name :</span> Mazuel Loïc</h5>
-                        <h5 class="light"><span>Age :</span> 26 Years</h5>
+                        <h3 class="about-subtitle grey-text text-darken-4">Informations</h3>
+                        <h5 class="light"><span>Nom :</span> Mazuel Loïc</h5>
+                        <h5 class="light"><span>Âge :</span> 26 Years (3 février 1990)</h5>
                         <!--<h5><span>Phone :</span> +0123456789</h5>-->
-                        <h5 class="light"><span>Email :</span> me@loicmazuel.com</h5>
-                        <h5 class="light"><span>Address :</span> Paris, Reims</h5>
+                        <h5 class="light"><span>E-mail :</span> me@loicmazuel.com</h5>
+                        <h5 class="light"><span>Localisation :</span> Paris, Reims</h5>
+                        <h5 class="light"><span>Nationalité :</span> Française</h5>
                     </div>
 
                     <div class="about-social">
                         <ul>
                             <li>
-                                <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/Mazeel" target="_blank" class="btn-floating waves-effect waves-light white"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-twitter"></i></a>
+                                <a href="https://plus.google.com/109880929771102865222/posts" target="_blank" class="btn-floating waves-effect waves-light white"><i class="fa fa-google-plus"></i></a>
                             </li>
                             <li>
-                                <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-google-plus"></i></a>
+                                <a href="https://www.linkedin.com/in/lo%C3%AFc-mazuel-a2b37577" target="_blank" class="btn-floating waves-effect waves-light white"><i class="fa fa-linkedin"></i></a>
                             </li>
                             <li>
-                                <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-linkedin"></i></a>
+                                <a href="https://github.com/LouisMazel" target="_blank" class="btn-floating waves-effect waves-light white"><i class="fa fa-github"></i></a>
                             </li>
                             <li>
-                                <a href="#" class="btn-floating waves-effect waves-light white"><i class="fa fa-pinterest"></i></a>
+                                <a href="#" target="_blank" class="btn-floating waves-effect waves-light white"><i class="fa fa-bitbucket"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -123,108 +132,149 @@
 </div>
 
 
-<div class="parallax-container valign-wrapper">
-    <!--<div class="section ">-->
-        <!--<div class="container">-->
-            <!--<div class="row center">-->
-                <!--<h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <div class="section no-pad-bot" id="more" style="background: rgba(255,255,255, .92);">
-        <h2 class="center">My rules</h2>
+<div class="parallax-container valign-wrapper padd-tb-60" style="background-color: rgba(0,0,0,0.45);">
+    <div class="section no-pad-bot" id="competences">
+        <h2 class="center">Compétences</h2>
         <!--   Icon Section   -->
         <div class="row">
-            <div class="col s12 m4">
+            <div class="col s12 m3">
                 <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                    <h5 class="center">Speeds up development</h5>
+                    <h2 class="center"><img src="./assets/img/angularjs.png" height="80px"></h2>
+                    <h5 class="center">Développeur Front-End</h5>
 
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+                    <p class="light center">Réalisation de nombreuses interfaces web avec différentes technologies : AngularJS, JQuery, Ruby On Rails, HTML, CSS, Saas, Bootstrap. <br>Notions : ReactJS, NodeJS.</p>
                 </div>
             </div>
 
-            <div class="col s12 m4">
+            <div class="col s12 m3">
                 <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-                    <h5 class="center">User Experience Focused</h5>
+                    <h2 class="center"><img src="./assets/img/ionic.png" height="80px"></h2>
+                    <h5 class="center">Développeur Mobile</h5>
 
-                    <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+                    <p class="light center">Réalisation de nombreuses applications mobiles (iOS & Android) avec des technologies dîtes "Hybrides" (Ionic/Cordova). Trouvez un exemple <a href="https://itunes.apple.com/fr/app/marcel-voitures-avec-chauffeur/id803227884?mt=8" target="_blank">ici</a>. <br>Notions : Swift (iOS)</p>
                 </div>
             </div>
 
-            <div class="col s12 m4">
+            <div class="col s12 m3">
                 <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                    <h5 class="center">Easy to work with</h5>
+                    <h2 class="center"><img src="./assets/img/googleanalytics.png" height="80px"></h2>
+                    <h5 class="center">Web-Marketing</h5>
 
-                    <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+                    <p class="light center">SEO et SEM : Maîtrise des outils web marketing google (Analytics, Adwords, WebMasterTools, GoogleTagManager, etc). Bonnes connaissances en référencement naturel.</p>
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <div class="icon-block">
+                    <h2 class="center"><img src="./assets/img/photoshop.png" height="80px"></h2>
+                    <h5 class="center">UX Design / Graphisme</h5>
+
+                    <p class="light center">Maitrise des outils adobe suivants : Photoshop, Illustrator, InDesign. <br>Notions : AfterEffect, Premiere</p>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="parallax"><img src="./assets/img/background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="./assets/img/competences.jpg" alt="Unsplashed background img 2"></div>
 </div>
 
-<div class="container">
-    <div class="section">
+<div class="container padd-tb-60">
+    <div class="section" id="experiences">
 
         <div class="row">
             <div class="col s12 center">
-                <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>Contact Us</h4>
-                <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+                
+                <h2>Expériences</h2>
+
+                <hr style="border-top: 0;">
+                <div class="row">
+                    <div class="col m12">
+                        <h5 class="left-align">Freelance - Développement Web</h5>
+                        <p class="left-align light margin-0">
+                            Octobre 2016 - En cours
+                        </p>
+                        <p class="left-align light margin-0">
+                            <strong>Développeur Frontend - UX Designer</strong> 
+                            <br>
+                            Réalisation de sites vitrines - Création de logo 
+                        </p>
+                    </div>
+                </div>
+                
+                
+                <hr style="border-top: 0;">
+                <div class="row">
+                    <div class="col m8">
+                        <h5 class="left-align"><a href="http://www.yusofleet.com/" target="_blank">YusoFleet.com</a> & <a href="https://www.marcel.cab/" target="_blank">Marcel.cab</a></h5>
+                        <p class="left-align light margin-0">
+                            Avril 2014 - En cours - Paris 75012
+                        </p>
+                        <p class="left-align margin-0"><strong>Développeur Frontend - UX Designer Web et Mobile</strong></p>
+                        <br>
+                        <p class="left-align light margin-0">
+                            <strong>Web </strong>: Rédéfinition UX et Intégration du Frontoffice & Backoffice<br>
+                            Mise en place de Wordpress - API REST - Fonctionnalité sur le logiciel SAAS<br>
+                            <strong>Mobile </strong>: Application SAAS Android et iOS avec API : Cordova et IonicFramework<br>
+                            <strong>Emailing </strong>: Conception et intégration des newsletters et e-mails transactionnels<br>
+                            <strong>Graphic/Infographie </strong>: Création de charte graphique - Supports marketing physiques<br>
+                            <strong>SEO </strong>: Optimisation référencement naturel <br>
+                            <strong>SEM </strong>: Adwords - FacebookAds
+                        </p>
+                    </div>
+                    <div class="col m4">
+                        <img src="./assets/img/yuso.png" style="max-width: 200px; width:100%;">
+                        <img src="./assets/img/marcel.png" style="max-width: 200px; width:100%;">
+                    </div>
+                </div>
+                
+
+                <hr style="border-top: 0;">
+                <div class="row">
+                    <div class="col m8">
+                        
+                        <h5 class="left-align"><a href="http://www.krapahute.com/" target="_blank">Krapahute.com</a> - Société C3</h5>
+                        <p class="left-align light margin-0">
+                            Avril 2013 - Aout 2013 - Mourmelon-Le-Petit 51
+                        </p>
+                        <p class="left-align margin-0"><strong>Intégrateur Frontend - Web-Marketing</strong></p>
+                        <br>
+                        <p class="left-align light margin-0">
+                            <strong>SEO </strong>: Optimisation référencement naturel “Onsite” & “Offsite” - Structure HTML <br>
+                            <strong>Intégration </strong>: Landing Page. Mise en place de Wordpress (Blog) <br>
+                            <strong>UEX </strong>: Création et intégration de guide d'achat & F.A.Q, etc <br>
+                            <strong>Emailing </strong>: Création (UI et contenus) des newsletters et des e-mails transactionnels <br>
+                            <strong>Graphic/Infographie </strong>: Illustration Web & Print <br>
+                        </p>
+                    </div>
+                    <div class="col m4">
+                        <img src="./assets/img/krapahute.png" style="max-width: 200px; width:100%;">
+                    </div>
+                </div>
+                
             </div>
         </div>
 
     </div>
 </div>
 
-
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-            </div>
-        </div>
-    </div>
-    <div class="parallax"><img src="./assets/img/background3.jpg" alt="Unsplashed background img 3"></div>
-</div>
-
-<footer class="page-footer teal">
+<footer class="page-footer grey darken-4">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text"><i class="material-icons">person</i> Qui suis-je ?</h5>
-                <span class="grey-text text-lighten-4">Fort d'expériences dans différents secteurs du web, j'ai acquis de solides compétences que je mets aujourd'hui à votre service :</span>
-                <ul>
-                    <li class="grey-text text-lighten-4">Développement Web</li>
-                    <li class="grey-text text-lighten-4">Retouches Photoshop, Illustrator, InDesign (pas de conception)</li>
-                    <li class="grey-text text-lighten-4">Applications Mobiles hybrides</li>
-                </ul>
-
-
+                <h5 class="white-text">Me contacter ?</h5>
+                <p class="white-text">Écrivez à mon adresse e-mail : <a href="mailto:me@loic-mazuel.com">me@loic-mazuel.com</a></p>
             </div>
             <div class="col l3 s12">
-                <h5 class="white-text">Contact</h5>
-                <ul>
-                    <li></li>
-                </ul>
+                
             </div>
             <div class="col l3 s12">
-                <h5 class="white-text">Settings</h5>
-                <ul>
-                    <li><a class="white-text" href="#">PortFolio</a></li>
-                </ul>
+                
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
+    <div class="footer-copyright black">
         <div class="container">
             <div class="row">
-                <div class="col s6">Made by Loïc Mazuel</div>
+                <div class="col s6">By Loïc Mazuel</div>
                 <div class="col s6 right-align"><a style="color:rgba(255,255,255,0.8)" href="mailto:me@loic-mazuel.com">me@loic-mazuel.com</a></div>
             </div>
         </div>
