@@ -71,9 +71,6 @@ a.btn-large i {
   display: inline-block;
   min-width: 100px;
 }
-.about-inner {
-  margin: 60px 0;
-}
 .about-social {
   margin: 25px 0 0;
 }
@@ -113,6 +110,12 @@ a.btn-large i {
   }
   h5 {
     font-size: 20px;
+  }
+  .person-about {
+    margin-bottom: 30px;
+  }
+  .about-social {
+    text-align: center;
   }
 }
 /*@media only screen and (max-width : 992px) {*/

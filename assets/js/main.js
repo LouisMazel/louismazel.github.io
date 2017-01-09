@@ -11,7 +11,14 @@
       resizeHead();
     });
 
-    $('.button-collapse').sideNav();
+    $('.button-collapse').sideNav({
+      menuWidth: 270, // Default is 240
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteo
+    });
+    $('#nav-mobile a').click(function () {
+      $('.button-collapse').sideNav('hide');
+    })
+    
     $('.parallax').parallax();
 
     $('.js-scrollTo').on('click', function() { // Au clic sur un élément
