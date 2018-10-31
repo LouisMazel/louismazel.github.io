@@ -1,23 +1,26 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <el-container id="home" class="home mh-100 h-100">
+    <el-header class="p-0">
+      <top-menu />
+    </el-header>
+    <el-container >
+      <router-view/>
+    </el-container>
+    <el-footer
+      class="bg-secondary text-white flex align-center justify-content-center">
+      <el-button size="small" href="mailto:mazuel.loic@gmail.com">mazuel.loic@gmail.com</el-button>
+    </el-footer>
+  </el-container>
 </template>
 
 <script>
+  import TopMenu from '@/components/TopMenu'
+
   export default {
-    name: 'App'
+    name: 'App',
+    components: {
+      TopMenu
+    }
   }
 </script>
 
-<style lang="scss" scoped>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-</style>

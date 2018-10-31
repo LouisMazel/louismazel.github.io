@@ -1,0 +1,11 @@
+@import "./../variables/_colors.scss";
+
+// Font-size
+@each $name, $hex in $colors {
+  .bg-#{$name} {
+    background-color: $hex !important;
+  }
+  .text-#{$name} {
+    color: $hex !important;
+  }
+}

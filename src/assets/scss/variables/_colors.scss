@@ -1,15 +1,19 @@
 // Brand colors
-$primary: #96bf31;
+$primary: #67C23A;
 $primaryDarken: darken($primary, 10%);
 
-$info: #287696;
+$info: #409EFF;
 $infoDarken: darken($info, 10%);
 
-$secondary: #21222E;
+$secondary: #292929;
 $secondaryDarken: darken($secondary, 10%);
+$secondaryLighten: lighten($secondary, 10%);
 
-$danger: #f53b54;
-$dangerDarken: #a62839;
+$warning: #E6A23C;
+$warningDarken: darken($warning, 10%);
+
+$danger: #F56C6C;
+$dangerDarken: darken($danger, 10%);
 
 $cyan: #2EBCE8;
 $cyanDarken: #2595b8;
@@ -30,3 +34,18 @@ $delivery: $primary;
 $proposal-pending: $light-blue;
 $proposal-accepted: $teal;
 $proposal-danger: $danger;
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+  secondary-dark: $secondaryDarken,
+  secondary-light: $secondaryLighten,
+  info: $info,
+  danger: $danger,
+  cyan: $cyan,
+  teal: $teal,
+  light-blue: $light-blue,
+  backgroundF2: $backgroundF2,
+  white: white,
+  black: black
+);

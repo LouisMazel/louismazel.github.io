@@ -3,14 +3,31 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui'
+import './assets/scss/override-element.scss'
 import './assets/scss/main.scss'
+import i18n from '@/locales'
+import store from './store'
+import { sync } from 'vuex-router-sync'
+import filters from './filters/filters'
+import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
+import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.min.css'
+
+Vue.component('vue-ctk-date-time-picker', VueCtkDateTimePicker)
+
+sync(store, router)
 
 Vue.config.productionTip = false
 
+Vue.use(ElementUI)
+
+filters.create(Vue)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
+  i18n,
   components: { App },
   template: '<App/>'
 })
