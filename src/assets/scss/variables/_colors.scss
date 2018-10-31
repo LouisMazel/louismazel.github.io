@@ -1,0 +1,32 @@
+// Brand colors
+$primary: #96bf31;
+$primaryDarken: darken($primary, 10%);
+
+$info: #287696;
+$infoDarken: darken($info, 10%);
+
+$secondary: #21222E;
+$secondaryDarken: darken($secondary, 10%);
+
+$danger: #f53b54;
+$dangerDarken: #a62839;
+
+$cyan: #2EBCE8;
+$cyanDarken: #2595b8;
+
+$teal: #6acfb5;
+$light-blue: #2EBCE8;
+$backgroundF2: #F2F2F2;
+
+// Text colors
+$primary-text: #21222E;
+$secondary-text: #676A6C;
+$third-text: #A4AAB3;
+
+$pickup: $info;
+$delivery: $primary;
+
+// Proposals colors
+$proposal-pending: $light-blue;
+$proposal-accepted: $teal;
+$proposal-danger: $danger;

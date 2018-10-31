@@ -1,0 +1,5 @@
+/build/
+/config/
+/web/
+/node_modules/
+/test/unit/coverage/
