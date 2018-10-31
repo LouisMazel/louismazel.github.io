@@ -12,6 +12,7 @@ import { sync } from 'vuex-router-sync'
 import filters from './filters/filters'
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.min.css'
+import VueAnalytics from 'vue-analytics'
 
 Vue.component('vue-ctk-date-time-picker', VueCtkDateTimePicker)
 
@@ -20,6 +21,11 @@ sync(store, router)
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+
+Vue.use(VueAnalytics, {
+  id: 'UA-90099342-1',
+  router
+})
 
 filters.create(Vue)
 /* eslint-disable no-new */
