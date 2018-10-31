@@ -14,7 +14,7 @@ import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.min.css'
 import VueAnalytics from 'vue-analytics'
 
-Vue.component('vue-ctk-date-time-picker', VueCtkDateTimePicker)
+Vue.component('ctk-date-time-picker', VueCtkDateTimePicker)
 
 sync(store, router)
 
