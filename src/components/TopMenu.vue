@@ -1,18 +1,18 @@
 <template>
   <el-menu
     :default-active="$router.currentRoute.path"
+    :background-color="$store.state.secondaryColor"
+    :active-text-color="$store.state.infoColor"
     class="flex align-center justify-content-center"
     mode="horizontal"
     style="border-bottom: 0;"
-    :background-color="$store.state.secondaryColor"
-    :active-text-color="$store.state.infoColor"
   >
     <el-menu-item
-      :index="rule.path"
       v-for="rule in $router.options.routes"
       :key="rule.name"
-      @click="goTo(rule.name)"
+      :index="rule.path"
       router
+      @click="goTo(rule.name)"
     >
       {{ rule.name }}
     </el-menu-item>
@@ -29,7 +29,7 @@
     },
     methods: {
       goTo (route) {
-        this.$router.push( {name: route} )
+        this.$router.push({ name: route })
       }
     }
   }

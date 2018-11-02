@@ -4,15 +4,15 @@
     class="side-bar-menu bg-secondary-dark"
     width="320px">
     <el-menu
-      default-active="2"
       :background-color="$store.state.secondaryDarkenColor"
-      text-color="#fff"
       :active-text-color="$store.state.infoColor"
+      default-active="2"
+      text-color="#fff"
       style="border-right: 0;"
     >
       <el-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="el-icon-location" />
           <span>Navigator One</span>
         </template>
         <el-menu-item-group title="Group One">
@@ -27,11 +27,11 @@
         </el-submenu>
       </el-submenu>
       <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
+        <i class="el-icon-menu" />
         <span>Navigator Two</span>
       </el-menu-item>
       <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
+        <i class="el-icon-setting" />
         <span>Navigator Four</span>
       </el-menu-item>
     </el-menu>

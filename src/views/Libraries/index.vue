@@ -3,11 +3,13 @@
     id="libraries"
     class="libraries bg-secondary-light"
   >
-    <side-bar-menu />
+    <side-bar-menu/>
     <el-main>
       <div class="tile">
         <h1 class="mt-0 text-white fs-28 fw-300 text-center mb-2">Vue Ctk Date Time Picker</h1>
-        <h2 class="mt-0 text-white fs-22 fw-300 text-center">DateTimePicker, DatePicker, TimePicker, RangeDatePicker</h2>
+        <h2 class="mt-0 text-white fs-22 fw-300 text-center">
+          DateTimePicker, DatePicker, TimePicker, RangeDatePicker
+        </h2>
       </div>
       <div class="flex justify-content-center mb-3">
         <el-button
@@ -39,13 +41,13 @@
               tabindex="-1"
               style="height: 120px;">
               <ctk-date-time-picker
-                v-model="value"
-                :minute-interval="10"
-                color="#96bf31"
-                :dark="darkMode"
-                enable-button-validate
-                :min-date="'2018-04-03'"
-                :max-date="'2018-04-12'"
+              v-model="value"
+              :minute-interval="10"
+              color="#96bf31"
+              :dark="darkMode"
+              enable-button-validate
+              :min-date="'2018-04-03'"
+              :max-date="'2018-04-12'"
               />
             </textarea>
           </div>
@@ -73,14 +75,14 @@
               tabindex="-1"
               style="height: 150px;">
               <ctk-date-time-picker
-                v-model="{ start: '2018-04-05', end: '2018-04-20' }"
-                range-mode
-                overlay-background
-                color="purple"
-                enable-button-validate
-                format="YYYY-MM-DD"
-                formatted="ddd D MMM YYYY"
-                label="Select range"
+              v-model="{ start: '2018-04-05', end: '2018-04-20' }"
+              range-mode
+              overlay-background
+              color="purple"
+              enable-button-validate
+              format="YYYY-MM-DD"
+              formatted="ddd D MMM YYYY"
+              label="Select range"
               />
             </textarea>
           </div>
@@ -107,13 +109,13 @@
               tabindex="-1"
               style="height: 120px;">
               <ctk-date-time-picker
-                v-model="value2"
-                :dark="darkMode"
-                color="#287696"
-                format="YYYY-MM-DD"
-                formatted="ddd D MMM YYYY"
-                label="Choose date"
-                disable-time
+              v-model="value2"
+              :dark="darkMode"
+              color="#287696"
+              format="YYYY-MM-DD"
+              formatted="ddd D MMM YYYY"
+              label="Choose date"
+              disable-time
               />
             </textarea>
           </div>
@@ -141,14 +143,14 @@
               tabindex="-1"
               style="height: 130px;">
               <ctk-date-time-picker
-                v-model="yourValue"
-                :dark="darkMode"
-                formatted="h:mm a"
-                format="HH:mm"
-                time-format="h:mm a"
-                label="Choose time"
-                :minute-interval="10"
-                disable-date
+              v-model="yourValue"
+              :dark="darkMode"
+              formatted="h:mm a"
+              format="HH:mm"
+              time-format="h:mm a"
+              label="Choose time"
+              :minute-interval="10"
+              disable-date
               />
             </textarea>
           </div>
@@ -175,14 +177,14 @@
               tabindex="-1"
               style="height: 130px;">
               <ctk-date-time-picker
-                without-header
-                auto-close
-                v-model="yourValue"
-                time-format="HH:mm"
-                :minute-interval="10"
-                :error-hint="true"
-                hint="Error message"
-                locale="fr"
+              without-header
+              auto-close
+              v-model="yourValue"
+              time-format="HH:mm"
+              :minute-interval="10"
+              :error-hint="true"
+              hint="Error message"
+              locale="fr"
               />
             </textarea>
           </div>
@@ -207,12 +209,12 @@
               tabindex="-1"
               style="height: 100px;">
               <ctk-date-time-picker
-                v-model="value"
-                :dark="darkMode"
-                :disabled-dates="['2018-04-03', '2018-04-07', '2018-04-09', '2018-04-11', '2018-04-13', '2018-04-15', '2018-04-17', '2018-04-19']"
-                label="Choose date time"
-                no-weekends-days
-                inline
+              v-model="value"
+              :dark="darkMode"
+              :disabled-dates="['2018-04-03', '2018-04-07', '2018-04-09', '2018-04-11', '2018-04-13', '2018-04-15', '2018-04-17', '2018-04-19']"
+              label="Choose date time"
+              no-weekends-days
+              inline
               />
             </textarea>
           </div>
@@ -231,8 +233,8 @@
               tabindex="-1"
               style="height: 60px;">
               <ctk-date-time-picker
-                :dark="darkMode"
-                disabled
+              :dark="darkMode"
+              disabled
               />
             </textarea>
           </div>
