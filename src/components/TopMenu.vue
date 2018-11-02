@@ -1,21 +1,39 @@
 <template>
   <el-menu
-    :default-active="$router.currentRoute.path"
+    :default-active="$router.currentRoute.name"
     :background-color="$store.state.secondaryColor"
-    :active-text-color="$store.state.infoColor"
+    :active-text-color="$store.state.primaryColor"
     class="flex align-center justify-content-center"
     mode="horizontal"
     style="border-bottom: 0;"
   >
-    <el-menu-item
-      v-for="rule in $router.options.routes"
-      :key="rule.name"
-      :index="rule.path"
+    <component
+      v-for="route in $router.options.routes"
+      :key="route.name"
+      :index="route.name ? route.name : ''"
       router
-      @click="goTo(rule.name)"
-    >
-      {{ rule.name }}
-    </el-menu-item>
+      @click="goTo(route)"
+      :is="route.children ? 'el-submenu' : 'el-menu-item'">
+      <template
+        v-if="route.children"
+        slot="title">{{ route.menu }}</template>
+      <span
+        v-else
+      >
+        {{ route.menu }}
+      </span>
+      <el-menu-item
+        v-for="child in route.children"
+        :key="child.name"
+        v-if="child.name !== 'Summary'"
+        :index="child.name"
+        router
+        @click="goTo(child)"
+      >
+        <i class="el-icon-menu" />
+        {{ child.menu }}
+      </el-menu-item>
+    </component>
   </el-menu>
 </template>
 
@@ -29,7 +47,7 @@
     },
     methods: {
       goTo (route) {
-        this.$router.push({ name: route })
+        this.$router.push({ name: route.name })
       }
     }
   }

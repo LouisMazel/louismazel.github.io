@@ -16,7 +16,7 @@ const jsonConcat = function (o1, o2) {
   }
   return o1
 }
-let files = ['app']
+let files = ['app', 'routes']
 loadLocales.forEach((lang) => {
   let translations = {}
   files.forEach((file) => {

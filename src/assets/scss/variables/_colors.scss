@@ -1,9 +1,9 @@
 // Brand colors
-$primary: #67C23A;
-$primaryDarken: darken($primary, 10%);
-
-$info: #409EFF;
+$info: #67C23A;
 $infoDarken: darken($info, 10%);
+
+$primary: #409EFF;
+$primaryDarken: darken($primary, 10%);
 
 $secondary: #292929;
 $secondaryDarken: darken($secondary, 10%);
@@ -26,9 +26,6 @@ $backgroundF2: #F2F2F2;
 $primary-text: #21222E;
 $secondary-text: #676A6C;
 $third-text: #A4AAB3;
-
-$pickup: $info;
-$delivery: $primary;
 
 // Proposals colors
 $proposal-pending: $light-blue;

@@ -13,6 +13,10 @@ import filters from './filters/filters'
 import VueCtkDateTimePicker from 'vue-ctk-date-time-picker'
 import 'vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.min.css'
 import VueAnalytics from 'vue-analytics'
+import AirbnbStyleDatepicker from 'vue-airbnb-style-datepicker'
+import 'vue-airbnb-style-datepicker/dist/vue-airbnb-style-datepicker.min.css'
+
+Vue.use(AirbnbStyleDatepicker)
 
 Vue.component('ctk-date-time-picker', VueCtkDateTimePicker)
 

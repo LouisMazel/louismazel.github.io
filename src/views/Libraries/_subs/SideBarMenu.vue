@@ -5,34 +5,18 @@
     width="320px">
     <el-menu
       :background-color="$store.state.secondaryDarkenColor"
-      :active-text-color="$store.state.infoColor"
-      default-active="2"
+      :active-text-color="$store.state.primaryColor"
+      :default-active="$router.currentRoute.name"
       text-color="#fff"
       style="border-right: 0;"
     >
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-location" />
-          <span>Navigator One</span>
-        </template>
-        <el-menu-item-group title="Group One">
-          <el-menu-item index="1-1">item one</el-menu-item>>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group Two">
-          <el-menu-item index="1-3">item three</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template slot="title">item four</template>
-          <el-menu-item index="1-4-1">item one</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">
+      <el-menu-item
+        v-for="route in $router.options.routes[1].children"
+        v-if="route.name !== 'Summary'"
+        :key="route.name"
+        :index="route.name">
         <i class="el-icon-menu" />
-        <span>Navigator Two</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting" />
-        <span>Navigator Four</span>
+        <span>{{ route.menu }}</span>
       </el-menu-item>
     </el-menu>
   </el-aside>

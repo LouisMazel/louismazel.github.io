@@ -1,0 +1,10 @@
+{
+  "library": {
+    "title": "Libraries",
+    "meta_description": "My libraries in VueJS"
+  },
+  "me": {
+    "title": "Me",
+    "meta_description": "About me"
+  }
+}
