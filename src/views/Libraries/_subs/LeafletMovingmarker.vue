@@ -9,7 +9,7 @@
       :min-zoom="mapData.minZoom"
       :options="mapData.options"
       :center="mapData.center"
-      class="leaflet-map flex-1">
+      class="leaflet-map flex-1 br-4">
       <l-tile-layer
         :url="mapData.url"
         :attribution="mapData.attribution"
