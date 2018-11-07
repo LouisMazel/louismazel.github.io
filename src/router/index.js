@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Me from '@/views/Me'
 import Libraries from '@/views/Libraries'
-import VueCtkDateTimePickerView from '@/views/Libraries/_subs/VueCtkDateTimePickerView'
+import VueCtkDateTimePicker from '@/views/Libraries/_subs/VueCtkDateTimePicker'
+import LeafletMovingMarker from '@/views/Libraries/_subs/LeafletMovingMarker'
 import Summary from '@/views/Libraries/_subs/Summary'
 import locales from '@/locales'
 
@@ -62,13 +63,21 @@ const router = new Router({
         {
           name: 'Summary',
           path: '',
-          component: Summary,
+          component: Summary
         },
         {
-          name: 'VueCtkDateTimePickerView',
+          name: 'VueCtkDateTimePicker',
           path: 'vue-ctk-date-time-picker',
-          component: VueCtkDateTimePickerView,
-          menu: 'Vue Ctk Date Time Picker'
+          component: VueCtkDateTimePicker,
+          menu: 'Range Date Time Picker',
+          icon: 'el-icon-menu'
+        },
+        {
+          name: 'LeafletMovingMarker',
+          path: 'leaflet-moving-marker',
+          component: LeafletMovingMarker,
+          menu: 'Leaflet Moving Marker',
+          icon: 'el-icon-location'
         }
       ]
     }

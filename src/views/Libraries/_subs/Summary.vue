@@ -1,6 +1,6 @@
 <template>
   <div id="summary">
-    <router-link :to="{ name: 'VueCtkDateTimePickerView' }">
+    <router-link :to="{ name: 'VueCtkDateTimePicker' }">
       <el-button>Date Time Range Picker</el-button>
     </router-link>
   </div>

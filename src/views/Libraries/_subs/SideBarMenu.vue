@@ -11,12 +11,15 @@
       style="border-right: 0;"
     >
       <el-menu-item
-        v-for="route in $router.options.routes[1].children"
-        v-if="route.name !== 'Summary'"
-        :key="route.name"
-        :index="route.name">
-        <i class="el-icon-menu" />
-        <span>{{ route.menu }}</span>
+        v-for="child in $router.options.routes[1].children"
+        v-if="child.name !== 'Summary'"
+        :key="child.name"
+        :index="child.name"
+        @click="goTo(child)">
+        <i
+          v-if="child.icon"
+          :class="child.icon" />
+        <span>{{ child.menu }}</span>
       </el-menu-item>
     </el-menu>
   </el-aside>
@@ -24,6 +27,11 @@
 
 <script>
   export default {
-    name: 'SideBarMenu'
+    name: 'SideBarMenu',
+    methods: {
+      goTo (route) {
+        this.$router.push({ name: route.name })
+      }
+    }
   }
 </script>

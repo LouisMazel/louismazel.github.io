@@ -5,7 +5,7 @@
   >
     <side-bar-menu/>
     <el-main>
-      <router-view></router-view>
+      <router-view/>
     </el-main>
   </el-container>
 </template>
