@@ -1,0 +1,22 @@
+{
+  "name": "louismazel.github.io",
+  "version": "1.0.0",
+  "description": "Personal web site - Portfolio",
+  "main": "index.html",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "serve": "live-server --host=localhost --port=8888"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisMazel/louismazel.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LouisMazel/louismazel.github.io/issues"
+  },
+  "homepage": "https://github.com/LouisMazel/louismazel.github.io#readme"
+}

@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="./bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <!--<link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>-->
     <!--<link href="assets/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>-->
@@ -19,6 +19,7 @@
 
 <div id="index-banner" class="parallax-container headContainer valign-wrapper" style="background-color: rgba(0,0,0,0.45);">
     <nav role="navigation" class="navDiv" style="position: absolute;top: 0;width: 100%; background: transparent; box-shadow:none;">
+        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-med-and-down"><i class="material-icons">menu</i></a>
         <div class="nav-wrapper container">
             <ul class="right hide-on-med-and-down">
                 <li><a href="#about" class="js-scrollTo white-text">À propos</a></li>
@@ -26,16 +27,17 @@
                 <li><a href="#experiences" class="js-scrollTo white-text">Expériences</a></li>
                 <li><a href="#portfolio" class="js-scrollTo white-text">Portfolio</a></li>
             </ul>
-
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="#about" class="js-scrollTo">À propos</a></li>
-                <li><a href="#competences" class="js-scrollTo">Compétences</a></li>
-                <li><a href="#experiences" class="js-scrollTo">Expériences</a></li>
-                <li><a href="#portfolio" class="js-scrollTo">Portfolio</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#about" class="js-scrollTo sidenav-close">À propos</a></li>
+        <li><a href="#competences" class="js-scrollTo sidenav-close">Compétences</a></li>
+        <li><a href="#experiences" class="js-scrollTo sidenav-close">Expériences</a></li>
+        <li><a href="#portfolio" class="js-scrollTo sidenav-close">Portfolio</a></li>
+    </ul>
+    
+
     <div class="valign">
         <div class="section no-pad-bot">
             <div class="container">
@@ -324,8 +326,8 @@
 
 
 <!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="./bower_components/materialize/dist/js/materialize.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/js/main.js"></script>
 <!--<script src="./assets/js/bootstrap.min.js"></script>-->
 <script>
