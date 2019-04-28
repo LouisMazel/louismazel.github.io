@@ -3,14 +3,14 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     cors = require('cors'),
     mongoose = require('mongoose'),
-    config = require('./config'),
     contactFormRoutes = require('./routes/contactFormRoutes')
 
+const { dev, production } = require('./config')
 mongoose.Promise = global.Promise
-mongoose.connect(config.DBpath, { useNewUrlParser: true })
+mongoose.connect(process.env.NODE_ENV === 'production' ? production : dev, { useNewUrlParser: true })
   .then(
-    () => console.log('Database is connected'),
-    err => console.log('Can not connect to the database'+ err)
+    () => console.log(`Database is connected ${process.env.NODE_ENV === 'production' ? 'prod' : 'dev'}`),
+    err => console.log(`Can not connect to the database ${err}`)
   )
 
 const app = express()

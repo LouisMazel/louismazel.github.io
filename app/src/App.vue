@@ -1,70 +1,45 @@
 <template>
-  <div id="app">
-    <img
-      alt="Vue logo"
-      src="./assets/logo.png"
-    >
-    <p
-      v-for="contact in contacts"
-      :key="contact._id"
-    >
-      {{ contact }}
-    </p>
-    <button
-      @click="addContact({
-        name: 'okokok',
-        email: 'loic@gmail.com'
-      })"
-    >
-      Add contact
-    </button>
-    <button
-      @click="getContact()"
-    >
-      get contact
-    </button>
+  <div
+    id="app"
+    class="flex flex-direction-column h-100 mh-100 w-100"
+  >
+    <nav-bar />
+    <router-view class="flex-1" />
   </div>
 </template>
 
 <script>
+  import NavBar from '@/components/NavBar'
   export default {
     name: 'App',
+    components: {
+      NavBar
+    },
+    metaInfo () {
+      return {
+        title: this.title,
+        titleTemplate: this.titleTemplate
+      }
+    },
     data () {
       return {
-        contacts: []
+        title: null,
+        titleTemplate: 'Chronotruck'
       }
     },
-    mounted () {
-      this.getContact()
-    },
-    methods: {
-      addContact (payload) {
-        payload = {
-          ...payload,
-          message: 'Bla bal bal blabl'
-        }
-        const uri = 'http://localhost:4000/contact-form/add'
-        this.axios.post(uri, payload).then((response) => {
-          console.log(response)
-        })
-      },
-      getContact () {
-        const uri = 'http://localhost:4000/contact-form'
-        this.axios.get(uri).then(({ data }) => {
-          this.contacts = data
-        })
-      }
+    created () {
+      this.$router.onReady(() => {
+        this.title = 'Bienvenue'
+        this.titleTemplate = 'Loïc Mazuel - %s'
+      })
     }
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+  @import './src/assets/scss/main.scss';
+
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2C3E50;
-    margin-top: 60px;
+    background-color: $background-color;
   }
 </style>

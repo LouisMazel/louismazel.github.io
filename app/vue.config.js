@@ -1,22 +1,21 @@
-const path = require('path')
-
 module.exports = {
-  devServer: {
-    host: '0.0.0.0',
-    port: process.env.APP_PORT || 8080,
-    public: `0.0.0.0:${process.env.APP_PORT || 8080}`,
-    disableHostCheck: true
-  },
+  // devServer: {
+  //   host: '0.0.0.0',
+  //   port: process.env.APP_PORT || 8080,
+  //   public: `0.0.0.0:${process.env.APP_PORT || 8080}`,
+  //   disableHostCheck: true
+  // },
 
   pluginOptions: {
     webpackBundleAnalyzer: {
       openAnalyzer: false
-    },
-    'style-resources-loader': {
-      preProcessor: 'scss',
-      patterns: [
-        path.resolve(__dirname, 'src/assets/scss/_variables.scss')
-      ]
+    }
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `@import "@/assets/scss/_variables.scss";`
+      }
     }
   },
 
