@@ -9,7 +9,8 @@ $base-line-height: 1.5 !default;
 
 $text-color:       white !default;
 $background-color: #21222E !default;
-$brand-color:      #96BF31 !default;
+$background-color-lighter: lighten($background-color, 15%) !default;
+$brand-color:      dodgerblue !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;

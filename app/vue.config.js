@@ -23,7 +23,7 @@ module.exports = {
     index: {
       entry: 'src/main.js',
       filename: 'index.html',
-      title: 'Loïc Mazuel'
+      title: 'Loïc Mazuel | Développeur Full Stack Javascript | VueJS'
     }
   },
 

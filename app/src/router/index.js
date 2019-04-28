@@ -13,9 +13,14 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "home" */ '@/views/Home')
     },
     {
-      path: '/test',
-      name: 'Test',
-      component: () => import(/* webpackChunkName: "test" */ '@/views/Test')
+      path: '/contact',
+      name: 'Contact',
+      component: () => import(/* webpackChunkName: "contact" */ '@/views/Contact')
+    },
+    {
+      path: '/open-source',
+      name: 'OpenSource',
+      component: () => import(/* webpackChunkName: "open-source" */ '@/views/OpenSource')
     },
     {
       path: '*',

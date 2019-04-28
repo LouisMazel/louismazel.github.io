@@ -1,7 +1,7 @@
 <template>
   <div
     id="app"
-    class="flex flex-direction-column h-100 mh-100 w-100"
+    class="flex-1 flex flex-direction-column w-100"
   >
     <nav-bar />
     <router-view class="flex-1" />
