@@ -8,6 +8,8 @@ In `root` folder
 
 ## Start database server
 
+Prerequisites : Follow mongodb installation (https://treehouse.github.io/installation-guides/mac/mongo-mac.html)
+
 ### Start mongodb bin
 
 ```bash
