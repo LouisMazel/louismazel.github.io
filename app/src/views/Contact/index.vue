@@ -27,6 +27,26 @@
         class="mb-3"
         dark
       />
+      <vue-phone-number-input
+        v-model="phone"
+        class="mb-3"
+        label="Numéro de téléphone"
+        default-country-code="FR"
+        :preferred-countries="['FR', 'BE', 'DE']"
+        :translations="{
+          countrySelectorLabel: 'Code pays',
+          countrySelectorError: 'Choisir un pays',
+          phoneNumberLabel: 'Numéro de téléphone',
+          example: 'Exemple :'
+        }"
+        type="tel"
+        name="phone"
+        :error="errors.has('phone')"
+        :hint="errors.first('phone')"
+        :data-vv-as="'Numéro de téléphone'"
+        v-validate="'required'"
+        dark
+      />
       <vue-input-ui
         label="Message"
         v-model="message"
@@ -59,6 +79,8 @@
 
 <script>
   import VueInputUi from 'vue-input-ui'
+  import VuePhoneNumberInput from 'vue-phone-number-input'
+  import 'vue-phone-number-input/dist/vue-phone-number-input.css'
 
   export default {
     name: 'Contact',
@@ -68,13 +90,15 @@
       }
     },
     components: {
-      VueInputUi
+      VueInputUi,
+      VuePhoneNumberInput
     },
     data () {
       return {
         contacts: [],
         name: null,
         email: null,
+        phone: null,
         message: null,
         inputColor: '#96BF31'
       }
@@ -90,7 +114,6 @@
         }
         this.$validator.validateAll()
           .then(valid => {
-            console.log(valid)
             if (!valid) {
               return
             }
