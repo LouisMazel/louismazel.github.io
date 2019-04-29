@@ -81,9 +81,13 @@
     }
     &__content {
       &-keyword {
-        padding: 10px;
-        margin: 10px;
-        background-color: $background-color;
+        border: 2px solid lighten($background-color-light, 10%);
+        padding: 0 10px;
+        margin: 5px;
+        display: inline-block;
+        border-radius: 35px;
+        height: 35px;
+        line-height: 33px;
       }
     }
 
