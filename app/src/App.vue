@@ -33,7 +33,7 @@
     created () {
       this.$router.onReady(() => {
         this.title = 'Bienvenue'
-        this.titleTemplate = 'Loïc Mazuel - %s'
+        this.titleTemplate = '%s - Loïc Mazuel'
       })
     }
   }

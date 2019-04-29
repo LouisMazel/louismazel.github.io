@@ -8,7 +8,7 @@
         :to="{ name: 'Home' }"
         class="nav-bar-item nav-bar-item__main p-3 pl-4"
       >
-        <h1 class="fs-16 fw-400">
+        <h1 class="fs-16 fw-400 text-white">
           Loïc Mazuel <br>
           <span class="fs-14">Developer Full Stack Javascript | VueJS</span>
         </h1>
