@@ -1,0 +1,14 @@
+.btn {
+  display: inline-block;
+  height: 50px;
+  border-radius: 50px;
+  line-height: 50px;
+  padding: 0 32px;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.6), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+}

@@ -10,7 +10,7 @@
       >
         <h1 class="fs-16 fw-400">
           Loïc Mazuel <br>
-          <span class="fs-12">Developer Full Stack Javascript | VueJS</span>
+          <span class="fs-14">Developer Full Stack Javascript | VueJS</span>
         </h1>
       </router-link>
       <div class="nav-bar-items flex">
@@ -41,6 +41,7 @@
 <style lang="scss" scoped>
   .nav-bar {
     background-color: $background-color;
+    border-bottom: 1px solid $background-color-light;
 
     &-item {
       color: white;
@@ -55,18 +56,19 @@
 
       &:hover {
         background-color: rgba(white, 0.2);
+
         &:not(.nav-bar-item__main) {
           border-bottom: 2px solid white;
         }
       }
 
       &__main {
-        line-height: 18px;
+        line-height: 20px;
 
         h1 {
           position: relative;
 
-          &:after {
+          &::after {
             content: '';
             position: absolute;
             width: 2px;

@@ -5,15 +5,18 @@
   >
     <nav-bar />
     <router-view class="flex-1" />
+    <nav-footer />
   </div>
 </template>
 
 <script>
   import NavBar from '@/components/NavBar'
+  import NavFooter from '@/components/NavFooter'
   export default {
     name: 'App',
     components: {
-      NavBar
+      NavBar,
+      NavFooter
     },
     metaInfo () {
       return {

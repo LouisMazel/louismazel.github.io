@@ -1,5 +1,5 @@
 <template>
-  <div class="home flex align-center justify-content-center">
+  <div class="home flex flex-direction-column">
     <div class="profile">
       <div class="profile-container-picture">
         <h2>Loïc Mazuel</h2>
@@ -9,6 +9,22 @@
           alt="personal picture"
         >
       </div>
+    </div>
+    <div class="section__open-source flex justify-content-center">
+      <router-link
+        class="btn"
+        :to="{ name: 'OpenSource' }"
+      >
+        Show my open source projects
+      </router-link>
+    </div>
+    <div class="section__contact flex justify-content-center">
+      <router-link
+        class="btn"
+        :to="{ name: 'Contact' }"
+      >
+        Contact me here
+      </router-link>
     </div>
   </div>
 </template>
@@ -29,7 +45,7 @@
     .profile {
       &-container-picture {
         img {
-          border: 8px solid #fff;
+          border: 8px solid white;
           height: 300px;
         }
       }

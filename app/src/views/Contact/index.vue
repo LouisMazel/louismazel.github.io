@@ -56,8 +56,8 @@
         :hint="errors.first('message')"
         :data-vv-as="'message'"
         v-validate="'required'"
-        no-label
         dark
+        textarea
       />
       <p
         v-for="contact in contacts"
@@ -141,6 +141,6 @@
 
 <style lang="scss">
   .field .field-input {
-    background-color: $background-color-lighter !important;
+    background-color: $background-color-light !important;
   }
 </style>
