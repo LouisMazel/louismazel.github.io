@@ -1,9 +1,9 @@
 <template>
   <footer
-    class="nav-footer py-4"
+    class="nav-footer"
     role="contentinfo"
   >
-    <div class="container flex justify-content-between">
+    <div class="nav-footer-content container flex justify-content-between py-4">
       <ul>
         <li
           v-for="route in routes"
@@ -16,8 +16,15 @@
           </router-link>
         </li>
       </ul>
-      <div class="copyright flex flex-end">
-        © Loïc Mazuel | Site réalisé avec VueJS & NodeJS
+    </div>
+    <div class="nav-footer-subs py-2">
+      <div class="container flex flex-end">
+        <a
+          href="https://github.com/LouisMazel/louismazel.github.io"
+          target="_blank"
+        >
+          © Loïc Mazuel | Site réalisé avec VueJS & NodeJS
+        </a>
       </div>
     </div>
   </footer>
@@ -38,5 +45,10 @@
   .nav-footer {
     border-top: 1px solid $background-color-light;
     color: $grey-color-light;
+
+    &-subs {
+      border-top: 1px solid $background-color-light;
+      background-color: $background-color-dark;
+    }
   }
 </style>

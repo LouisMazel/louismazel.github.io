@@ -1,5 +1,5 @@
 <template>
-  <div class="home flex flex-direction-column">
+  <div class="home flex flex-direction-column container">
     <div class="profile">
       <div class="profile-container-picture">
         <h2>Loïc Mazuel</h2>
