@@ -21,7 +21,9 @@
       <div class="container flex flex-end">
         <a
           href="https://github.com/LouisMazel/louismazel.github.io"
+          title="loïc mazuel link to github project"
           target="_blank"
+          class="fs-14"
         >
           © Loïc Mazuel | Site réalisé avec VueJS & NodeJS
         </a>
@@ -48,7 +50,6 @@
 
     &-subs {
       border-top: 1px solid $background-color-light;
-      background-color: $background-color-dark;
     }
   }
 </style>

@@ -42,6 +42,9 @@
   .nav-bar {
     background-color: $background-color;
     border-bottom: 1px solid $background-color-light;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
 
     &-item {
       color: white;

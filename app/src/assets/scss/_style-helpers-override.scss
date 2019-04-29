@@ -29,6 +29,19 @@
       box-shadow: 0 0 0 0.2rem rgba($danger-color, .5);
     }
   }
+  &-dark {
+    &:hover, &:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgba($dark-color, .5);
+      box-shadow: 0 0 0 0.2rem rgba($dark-color, .5);
+    }
+  }
+  
+  &-white {
+    &:hover, &:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(white, .5);
+      box-shadow: 0 0 0 0.2rem rgba(white, .5);
+    }
+  }
   
   &-outline {
     background-color: transparent !important;
@@ -38,6 +51,22 @@
     &.btn-danger {
       border-color: $danger-color;
       color: $danger-color;
+
+      &:hover, &:focus {
+        background-color: transparent;
+      }
+    }
+    &.btn-dark {
+      border-color: $dark-color;
+      color: $dark-color;
+
+      &:hover, &:focus {
+        background-color: transparent;
+      }
+    }
+    &.btn-white {
+      border-color: white;
+      color: white;
 
       &:hover, &:focus {
         background-color: transparent;

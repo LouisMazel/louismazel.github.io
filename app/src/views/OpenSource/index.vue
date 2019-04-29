@@ -1,10 +1,12 @@
 <template>
-  <div class="open-source container py-5">
-    <h2>Open-source</h2>
-    <p>
-      Contribuer à l'écosystème open-source permet de tester de nouvelles technologies mais aussi de faire profiter des dernières inovations à un maximum d'utilisateur
-    </p>
-    <open-source-projects class="mt-5" />
+  <div class="open-source container">
+    <div class="py-5">
+      <h2>Open-source</h2>
+      <p>
+        Contribuer à l'écosystème open-source permet de tester de nouvelles technologies mais aussi de faire profiter des dernières inovations à un maximum d'utilisateur
+      </p>
+      <open-source-projects class="mt-5" />
+    </div>
   </div>
 </template>
 

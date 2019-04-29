@@ -4,7 +4,7 @@
     class="flex-1 flex flex-direction-column w-100"
   >
     <nav-bar />
-    <router-view class="flex-1" />
+    <router-view class="main flex-1" />
     <nav-footer />
   </div>
 </template>
@@ -44,5 +44,9 @@
 
   #app {
     background-color: $background-color;
+
+    .main {
+      padding-top: 75px !important;
+    }
   }
 </style>
