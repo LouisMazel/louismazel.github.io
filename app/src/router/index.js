@@ -23,6 +23,10 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "open-source" */ '@/views/OpenSource')
     },
     {
+      path: '/prestations',
+      name: 'Prestations'
+    },
+    {
       path: '*',
       redirect: { name: 'Home' }
     }
