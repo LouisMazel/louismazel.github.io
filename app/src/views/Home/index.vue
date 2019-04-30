@@ -9,10 +9,20 @@
         >
       </div>
     </div>
-    <div class="section-contact py-5">
+    <div class="section-skills py-5">
       <div class="container flex justify-content-center">
+        <h2 class="text-white">
+          Mes compétences
+        </h2>
+      </div>
+    </div>
+    <div class="section-contact py-5">
+      <div class="container flex flex-direction-column align-center">
+        <h2 class="text-white mb-3">
+          Confiez-moi votre projet
+        </h2>
         <router-link
-          class="btn btn-outline"
+          class="btn btn-primary-outline"
           :to="{ name: 'Contact' }"
         >
           Contactez-moi ici
@@ -20,9 +30,12 @@
       </div>
     </div>
     <div class="section-open-source py-5">
-      <div class="container flex justify-content-center">
+      <div class="container flex flex-direction-column align-center">
+        <h2 class="text-white mb-3">
+          J'ai réalisé plusieurs projets open-source
+        </h2>
         <router-link
-          class="btn btn-outline"
+          class="btn btn-primary-outline"
           :to="{ name: 'OpenSource' }"
         >
           Voir mes projets open-source
@@ -53,7 +66,7 @@
         }
       }
     }
-    .section-open-source, .section-profile {
+    .section-open-source, .section-skills {
       background-color: $background-color-light;
     }
   }

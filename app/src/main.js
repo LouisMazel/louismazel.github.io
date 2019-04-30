@@ -10,6 +10,8 @@ import axios from 'axios'
 
 import VueMeta from 'vue-meta'
 
+import filters from '@/filters'
+
 import VeeValidate, { Validator } from 'vee-validate'
 import veeValidateLocale from 'vee-validate/dist/locale/fr'
 
@@ -23,6 +25,8 @@ Vue.use(VeeValidate, {
 Vue.use(VueAxios, axios)
 
 Vue.use(VueMeta)
+
+filters.create(Vue)
 
 Vue.config.productionTip = false
 

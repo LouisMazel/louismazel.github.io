@@ -1,9 +1,17 @@
 <template>
   <div class="open-source-item-footer p-3 flex">
     <a
+      v-if="project.githubUrl"
+      :href="project.githubUrl"
+      class="btn btn-sm btn-white-outline flex align-center"
+      target="_blank"
+    >
+      GITHUB
+    </a>
+    <a
       v-if="project.npmUrl"
       :href="project.npmUrl"
-      class="btn btn-danger btn-sm btn-outline btn-npm"
+      class="btn btn-danger-outline btn-sm btn-outline btn-npm ml-3"
       target="_blank"
     >
       <svg viewBox="0 0 780 250">
@@ -14,17 +22,9 @@
       </svg>
     </a>
     <a
-      v-if="project.githubUrl"
-      :href="project.githubUrl"
-      class="btn btn-sm btn-white btn-outline ml-3 flex align-center"
-      target="_blank"
-    >
-      GITHUB
-    </a>
-    <a
       v-if="project.demoUrl"
       :href="project.demoUrl"
-      class="btn btn-sm btn-outline ml-3"
+      class="btn btn-sm btn-primary-outline ml-3"
       target="_blank"
     >
       DEMO

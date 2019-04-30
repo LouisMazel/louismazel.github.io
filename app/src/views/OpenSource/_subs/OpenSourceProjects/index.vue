@@ -30,7 +30,7 @@
             name: 'Vue Date Time Range Picker',
             description: 'A VueJS component for select date & time (range mode)',
             githubUrl: 'https://github.com/chronotruck/vue-ctk-date-time-picker',
-            imgUrl: 'https://github.com/chronotruck/vue-ctk-date-time-picker/raw/master/assets/illu-animated-dark.gif',
+            imgUrl: require('@/assets/img/open-source/vue-date-time-picker.jpg'),
             demoUrl: 'https://chronotruck.github.io/vue-ctk-date-time-picker/',
             npmUrl: 'https://www.npmjs.com/package/vue-ctk-date-time-picker',
             keywords: ['VueJS', 'MomentJS', 'Calendar', 'Date', 'Time', 'Picker', 'Range', 'VueComponent']
@@ -40,17 +40,27 @@
             name: 'Vue Phone Number Input',
             description: 'A beautiful text field to format phone numbers',
             githubUrl: 'https://github.com/LouisMazel/vue-phone-number-input',
-            imgUrl: 'https://github.com/LouisMazel/vue-phone-number-input/raw/master/public/vue-phone-number-input-demo.gif',
+            imgUrl: require('@/assets/img/open-source/vue-phone-number-input.jpg'),
             demoUrl: 'https://louismazel.github.io/vue-phone-number-input/',
             npmUrl: 'https://www.npmjs.com/package/vue-phone-number-input',
             keywords: ['VueJS', 'LibphonenumberJS', 'VueInputUi', 'Phone Number', 'Format', 'Validator', 'UI']
+          },
+          {
+            id: '5',
+            name: 'Style Helpers',
+            description: 'Une librarie (framework) CSS réalisée avec Gulp & SASS',
+            githubUrl: 'https://github.com/LouisMazel/style-helpers',
+            imgUrl: require('@/assets/img/open-source/style-helpers.jpg'),
+            npmUrl: 'https://www.npmjs.com/package/style-helpers',
+            demoUrl: 'http://louismazel.github.io/style-helpers',
+            keywords: ['CSS', 'SASS', 'style', 'helpers', 'framework', 'library', 'gulp']
           },
           {
             id: '2',
             name: 'Vue Input UI',
             description: 'A beautiful input & textarea field component',
             githubUrl: 'https://github.com/LouisMazel/vue-input-ui',
-            imgUrl: 'https://github.com/LouisMazel/vue-input-ui/raw/master/public/vue-input-ui-demo.gif',
+            imgUrl: require('@/assets/img/open-source/vue-input-ui.jpg'),
             demoUrl: 'https://louismazel.github.io/vue-input-ui/',
             npmUrl: 'http://npmjs.com/package/vue-input-ui',
             keywords: ['VueJS', 'Full CSS', 'Input', 'Textarea', 'Errors management']
@@ -79,10 +89,14 @@
       margin-right: -10px;
       margin-left: -10px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 16px;
 
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: $breakpoint-laptop-l) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: $breakpoint-tablet) {
         grid-template-columns: repeat(1, 1fr);
       }
 

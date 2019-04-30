@@ -3,7 +3,7 @@
     <h4 class="fs-18 text-white mb-2">
       {{ project.name }}
     </h4>
-    <p class="mb-2">
+    <p class="mb-2 text-white-muted">
       {{ project.description }}
     </p>
     <div class="open-source-item-content__keywords">
@@ -12,7 +12,7 @@
         :key="keyword"
         class="open-source-item-content__keywords__keyword fs-14"
       >
-        {{ keyword }}
+        {{ keyword | capitalize }}
       </span>
     </div>
   </div>
