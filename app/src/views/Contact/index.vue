@@ -33,12 +33,7 @@
         label="Numéro de téléphone"
         default-country-code="FR"
         :preferred-countries="['FR', 'BE', 'DE']"
-        :translations="{
-          countrySelectorLabel: 'Code pays',
-          countrySelectorError: 'Choisir un pays',
-          phoneNumberLabel: 'Numéro de téléphone',
-          example: 'Exemple :'
-        }"
+        :translations="translations"
         type="tel"
         name="phone"
         :error="errors.has('phone')"
@@ -69,8 +64,17 @@
         <button
           type="submit"
           class="btn"
+          :disabled="$wait.is('contact adding')"
         >
           Add contact
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          @click="removeContact"
+          :disabled="$wait.is('contact deleting')"
+        >
+          Remove contact
         </button>
       </div>
     </form>
@@ -81,6 +85,8 @@
   import VueInputUi from 'vue-input-ui'
   import VuePhoneNumberInput from 'vue-phone-number-input'
   import 'vue-phone-number-input/dist/vue-phone-number-input.css'
+
+  import { Contact } from '@/resources'
 
   export default {
     name: 'Contact',
@@ -100,40 +106,45 @@
         email: null,
         phone: null,
         message: null,
-        inputColor: '#96BF31'
+        inputColor: '#96BF31',
+        translations: {
+          countrySelectorLabel: 'Code pays',
+          countrySelectorError: 'Choisir un pays',
+          phoneNumberLabel: 'Numéro de téléphone',
+          example: 'Exemple :'
+        }
       }
     },
     mounted () {
-      this.getContact()
+      Contact.get()
+        .then(({ data }) => {
+          this.contacts = data
+        })
     },
     methods: {
-      addContact (payload) {
-        payload = {
-          ...payload,
-          message: 'Bla bal bal blabl'
+      addContact () {
+        const payload = {
+          name: this.message,
+          email: this.email,
+          phone: this.phone,
+          message: this.message
         }
         this.$validator.validateAll()
           .then(valid => {
             if (!valid) {
               return
             }
-            const uri = 'http://localhost:4000/contact-form/add'
-            this.axios.post(uri, payload).then((response) => {
-              console.log(response)
-            })
+            Contact.add({}, payload)
           })
       },
-      getContact () {
-        const uri = 'http://localhost:4000/contact-form'
-        this.axios.get(uri).then(({ data }) => {
-          this.contacts = data
-        })
-      },
       removeContact () {
-        const uri = `http://localhost:4000/contact-form/delete/${this.contacts[this.contacts.length - 1]._id}`
-        this.axios.get(uri).then((res) => {
-          console.log(res)
+        this.$wait.start('contact deleting')
+        console.log('this.contacts[this.contacts.length - 1]._id', this.contacts[this.contacts.length - 1]._id)
+        Contact.delete({
+          id: this.contacts[this.contacts.length - 1]._id
         })
+          .then(() => console.log('Delete'))
+          .finally(() => this.$wait.end('contact deleting'))
       }
     }
   }

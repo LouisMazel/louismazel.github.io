@@ -5,11 +5,11 @@ var express = require('express'),
     mongoose = require('mongoose'),
     contactFormRoutes = require('./routes/contactFormRoutes')
 
-const { dev, production } = require('./config')
+const { development, production } = require('./config')
 mongoose.Promise = global.Promise
-mongoose.connect(process.env.NODE_ENV === 'production' ? production : dev, { useNewUrlParser: true })
+mongoose.connect(process.env.NODE_ENV === 'production' ? production : development, { useNewUrlParser: true })
   .then(
-    () => console.log(`Database is connected ${process.env.NODE_ENV === 'production' ? 'prod' : 'dev'}`),
+    () => console.log(`Database is connected ${process.env.NODE_ENV}`),
     err => console.log(`Can not connect to the database ${err}`)
   )
 

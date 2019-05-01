@@ -30,12 +30,6 @@ $breakpoint-laptop-s: 1024px;
 $breakpoint-laptop-l: 1440px;
 $breakpoint-4k: 2560px;
 
-// Width of the content area
-$content-width:    $breakpoint-laptop-l !default;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;

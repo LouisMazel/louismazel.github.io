@@ -16,6 +16,9 @@
       border-radius: 48px;
     }
   }
+  &-disabled, &:disabled {
+    background-color: $grey-color;
+  }
 }
 
 .text-white-muted {
