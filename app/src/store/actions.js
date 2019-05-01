@@ -1,5 +1,5 @@
 export default {
-  setAppIsReady ({ commit }, val) {
-    commit('SET_APP_IS_READY', val)
+  setContacts ({ commit }, val) {
+    commit('SET_CONTACTS', val)
   }
 }

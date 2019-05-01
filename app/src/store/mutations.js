@@ -1,8 +1,5 @@
 export default {
-  SET_APP_IS_READY (state, val) {
-    state.appIsReady = val
-  },
-  SET_SHOW_NAV_BAR (state, val) {
-    state.showNavBar = val
+  SET_CONTACTS (state, val) {
+    state.contacts = val
   }
 }
