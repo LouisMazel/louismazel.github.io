@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "My personnal website",
   "scripts": {
-    "serve": "node ./db/server.js"
+    "serve": "node server.js"
   },
   "author": "",
   "license": "MIT",
