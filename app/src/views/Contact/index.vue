@@ -76,7 +76,10 @@
         </button>
       </div>
     </form>
-    <div class="bg-white br-4 p-4 mb-4 text-muted">
+    <div
+      v-if="getContacts.length"
+      class="bg-white br-4 p-4 mb-4 text-muted"
+    >
       <p
         v-for="contact in getContacts"
         :key="contact._id"
