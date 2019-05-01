@@ -13,12 +13,17 @@
 
 <script>
   export default {
-    name: 'Features'
+    name: 'Features',
+    metaInfo () {
+      return {
+        title: 'Prestations',
+        meta: [
+          {
+            name: 'description',
+            content: 'Features'
+          }
+        ]
+      }
+    }
   }
 </script>
-
-<style lang="scss" scoped>
-  .features{
-
-  }
-</style>

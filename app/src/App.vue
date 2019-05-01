@@ -26,15 +26,9 @@
     },
     data () {
       return {
-        title: null,
-        titleTemplate: 'Chronotruck'
+        title: 'Developer Full Stack Javascript | VueJS',
+        titleTemplate: '%s - Loïc Mazuel'
       }
-    },
-    created () {
-      this.$router.onReady(() => {
-        this.title = 'Bienvenue'
-        this.titleTemplate = '%s - Loïc Mazuel'
-      })
     }
   }
 </script>

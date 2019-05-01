@@ -103,7 +103,13 @@
     name: 'Contact',
     metaInfo () {
       return {
-        title: 'Contact'
+        title: 'Contact',
+        meta: [
+          {
+            name: 'description',
+            content: 'Contactez-moi pour réaliser vos projets web'
+          }
+        ]
       }
     },
     components: {

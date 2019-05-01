@@ -9,7 +9,7 @@
         Mes expériences professionnelles et personnelles m'ont aujourd'hui permis d'acquérir de solides compétences dans le développement. <br>
         Je suis à la recherche de nouveaux challenges et missions passionnantes
       </p>
-      <button class="btn">
+      <button class="btn btn-primary-outline">
         Mon CV
       </button>
     </div>
@@ -20,7 +20,7 @@
         alt="personal picture"
       >
     </div>
-    <div class="section-profile__picture flex-1 pl-3">
+    <div class="section-profile__infos flex-1 pl-3">
       <h2 class="mb-4">
         Informations
       </h2>
@@ -35,14 +35,14 @@
           Localisation : Paris
         </li>
       </ul>
-      <button class="btn btn-rounded">
-        Twitter
+      <button class="btn btn-primary-outline btn-rounded">
+        <i class="icon-twitter" />
       </button>
-      <button class="btn btn-rounded">
-        Linkedin
+      <button class="btn btn-primary-outline btn-rounded">
+        <i class="icon-linkedin" />
       </button>
-      <button class="btn btn-rounded">
-        Github
+      <button class="btn btn-primary-outline btn-rounded">
+        <i class="icon-github" />
       </button>
     </div>
   </div>
@@ -62,6 +62,12 @@
         height: 300px;
           width: 300px;
         border-radius: 50%;
+      }
+    }
+    &__infos {
+      ul li {
+        padding: 10px 0 ;
+        border-bottom: px solid $background-color-light;
       }
     }
   }

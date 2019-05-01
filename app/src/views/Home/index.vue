@@ -17,7 +17,13 @@
     name: 'Home',
     metaInfo () {
       return {
-        title: 'Développeur Full Stack Javascript | VueJS'
+        title: 'Developer Full Stack Javascript | VueJS',
+        meta: [
+          {
+            name: 'description',
+            content: 'Je suis développeur Full Stack Javascript, spécialisé VueJS.'
+          }
+        ]
       }
     },
     components: {

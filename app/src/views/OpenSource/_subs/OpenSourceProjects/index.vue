@@ -70,7 +70,7 @@
             name: 'Vue Leaflet Movingmarker',
             description: 'MovingMarker plugin extension for vue2-leaflet package',
             githubUrl: 'https://github.com/LouisMazel/vue2-leaflet-movingmarker',
-            imgUrl: 'http://louismazel.github.io/assets/img/portfolio/leaflet-moving-marker.gif',
+            imgUrl: require('@/assets/img/open-source/leaflet-moving-marker.gif'),
             npmUrl: 'https://www.npmjs.com/package/vue2-leaflet-movingmarker',
             keywords: ['VueJS', 'Leaflet', 'Vue2 Leaflet', 'Moving Marker', 'Maps']
           }

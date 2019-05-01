@@ -19,7 +19,13 @@
     name: 'OpenSource',
     metaInfo () {
       return {
-        title: 'Mes projets open-source'
+        title: 'Mes projets open-source',
+        meta: [
+          {
+            name: 'description',
+            content: 'Mes projets open-source'
+          }
+        ]
       }
     },
     components: {
