@@ -1,8 +1,16 @@
 <template>
   <div class="contact container">
+    <div class="py-5">
+      <h2 class="mb-3">
+        Contact
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      </p>
+    </div>
     <form
       @submit.prevent="addContact()"
-      class="p-4"
+      class="pb-5"
     >
       <vue-input-ui
         label="Nom"
@@ -31,15 +39,11 @@
         v-model="phone"
         class="mb-3"
         label="Numéro de téléphone"
-        default-country-code="FR"
         :preferred-countries="['FR', 'BE', 'DE']"
         :translations="translations"
         type="tel"
         name="phone"
-        :error="errors.has('phone')"
-        :hint="errors.first('phone')"
         :data-vv-as="'Numéro de téléphone'"
-        v-validate="'required'"
         dark
       />
       <vue-input-ui
@@ -54,12 +58,6 @@
         dark
         textarea
       />
-      <p
-        v-for="contact in contacts"
-        :key="contact._id"
-      >
-        {{ contact }}
-      </p>
       <div class="flex justify-content-end">
         <button
           type="submit"
@@ -71,13 +69,19 @@
         <button
           type="button"
           class="btn btn-danger"
-          @click="removeContact"
+          @click.stop="removeContact"
           :disabled="$wait.is('contact deleting')"
         >
           Remove contact
         </button>
       </div>
     </form>
+    <p
+      v-for="contact in contacts"
+      :key="contact._id"
+    >
+      {{ contact }}
+    </p>
   </div>
 </template>
 
@@ -106,7 +110,6 @@
         email: null,
         phone: null,
         message: null,
-        inputColor: '#96BF31',
         translations: {
           countrySelectorLabel: 'Code pays',
           countrySelectorError: 'Choisir un pays',
@@ -124,7 +127,7 @@
     methods: {
       addContact () {
         const payload = {
-          name: this.message,
+          name: this.name,
           email: this.email,
           phone: this.phone,
           message: this.message
@@ -139,7 +142,6 @@
       },
       removeContact () {
         this.$wait.start('contact deleting')
-        console.log('this.contacts[this.contacts.length - 1]._id', this.contacts[this.contacts.length - 1]._id)
         Contact.delete({
           id: this.contacts[this.contacts.length - 1]._id
         })

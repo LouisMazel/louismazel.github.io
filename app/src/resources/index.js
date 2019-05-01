@@ -6,13 +6,13 @@ Vue.use(VueResource)
 
 Vue.http.options.root = config.apiBase[process.env.NODE_ENV]
 
-export const Contact = Vue.resource('contact-form', {}, {
+export const Contact = Vue.resource('contacts', {}, {
   add: {
     method: 'POST',
-    url: 'contact-form/add'
+    url: 'contacts'
   },
   delete: {
-    method: 'GET',
-    url: 'contact-form/delete{/id}'
+    method: 'DELETE',
+    url: 'contacts{/id}'
   }
 })

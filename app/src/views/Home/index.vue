@@ -1,14 +1,6 @@
 <template>
   <div class="home flex flex-direction-column justify-content-between">
-    <div class="section-profile py-5">
-      <div class="section-profile__picture">
-        <img
-          src="@/assets/img/loic-mazuel.jpg"
-          class="profile-container-picture__picture"
-          alt="personal picture"
-        >
-      </div>
-    </div>
+    <section-profile />
     <div class="section-skills py-5">
       <div class="container flex justify-content-center">
         <h2 class="text-white">
@@ -32,7 +24,7 @@
     <div class="section-open-source py-5">
       <div class="container flex flex-direction-column align-center">
         <h2 class="text-white mb-3">
-          J'ai réalisé plusieurs projets open-source
+          Mes projets open-source
         </h2>
         <router-link
           class="btn btn-primary-outline"
@@ -46,26 +38,23 @@
 </template>
 
 <script>
+  import SectionProfile from './_subs/SectionProfile'
+
   export default {
     name: 'Home',
     metaInfo () {
       return {
         title: 'Développeur Full Stack Javascript | VueJS'
       }
+    },
+    components: {
+      SectionProfile
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .home {
-    .section-profile {
-      &__picture {
-        img {
-          border: 8px solid white;
-          height: 300px;
-        }
-      }
-    }
     .section-open-source, .section-skills {
       background-color: $background-color-light;
     }
