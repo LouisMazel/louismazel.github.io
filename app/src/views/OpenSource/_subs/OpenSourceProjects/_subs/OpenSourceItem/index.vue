@@ -43,10 +43,11 @@
     position: relative;
     // overflow: hidden;
 
-    &:hover, &:focus {
-      background-color: #41425c;
+    &:hover,
+    &:focus {
+      background-color: #41425C;
       transform: translateY(-3px);
-      box-shadow: 0 3px 12px #1e1e25;
+      box-shadow: 0 3px 12px #1E1E25;
       outline: none;
     }
 

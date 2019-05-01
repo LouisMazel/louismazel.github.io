@@ -56,17 +56,19 @@
       border-bottom: 2px solid transparent;
       transition: all 500ms;
       cursor: pointer;
+      outline: none;
 
-      &.router-link-exact-active:not(.nav-bar-item__main) {
-        border-bottom: 2px solid $brand-color;
-      }
-
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: rgba(white, 0.2);
 
         &:not(.nav-bar-item__main) {
           border-bottom: 2px solid white;
         }
+      }
+
+      &.router-link-exact-active:not(.nav-bar-item__main) {
+        border-bottom: 2px solid $brand-color;
       }
 
       &__main {

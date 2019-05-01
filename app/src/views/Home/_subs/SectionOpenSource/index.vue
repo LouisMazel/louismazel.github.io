@@ -21,7 +21,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .section-open-source{
+  .section-open-source {
     background-color: $background-color-light;
   }
 </style>

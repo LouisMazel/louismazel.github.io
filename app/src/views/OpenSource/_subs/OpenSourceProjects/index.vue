@@ -85,6 +85,7 @@
     &__title {
       border-bottom: 1px solid $background-color-light;
     }
+
     &__list {
       margin-right: -10px;
       margin-left: -10px;

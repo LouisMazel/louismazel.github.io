@@ -1,9 +1,9 @@
 @import 'style-helpers';
-@import './_style-helpers-override.scss';
-@import './_variables.scss';
+@import './_style-helpers-override';
+@import './_variables';
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 @import 'vue-input-ui/dist/vue-input-ui.css';
-@import './../ctk-font/ctk-font.css';
+@import './../icons/index';
 
 html,
 body {

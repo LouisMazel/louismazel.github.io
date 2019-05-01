@@ -1,6 +1,6 @@
 .btn {
   text-decoration: none !important;
-  
+
   &-rounded {
     border-radius: 42px;
   }
@@ -10,19 +10,21 @@
       border-radius: 36px;
     }
   }
-  
+
   &-lg {
     &.btn-rounded {
       border-radius: 48px;
     }
   }
-  &-disabled, &:disabled {
+
+  &-disabled,
+  &:disabled {
     background-color: $grey-color;
   }
 }
 
 .text-white-muted {
-  color: rgba(255, 255, 255, .54)
+  color: rgba(255, 255, 255, 0.54);
 }
 
 .bg-white {

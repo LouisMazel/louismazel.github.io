@@ -15,7 +15,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .section-skills{
+  .section-skills {
     background-color: $background-color-light;
   }
 </style>

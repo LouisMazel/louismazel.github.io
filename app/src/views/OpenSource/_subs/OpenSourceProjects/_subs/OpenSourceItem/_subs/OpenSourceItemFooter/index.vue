@@ -55,6 +55,7 @@
         fill: $danger-color;
       }
     }
+
     .btn-white svg {
       width: 25px;
 

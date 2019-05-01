@@ -23,9 +23,9 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "open-source" */ '@/views/OpenSource')
     },
     {
-      path: '/features',
-      name: 'Features',
-      component: () => import(/* webpackChunkName: "features" */ '@/views/Features')
+      path: '/services',
+      name: 'Services',
+      component: () => import(/* webpackChunkName: "services" */ '@/views/Services')
     },
     {
       path: '/admin',
