@@ -5,9 +5,10 @@
         À propos
       </h2>
       <p class="mb-4">
-        Passionné depuis toujours par le secteur du web, je suis un développeur autodidacte. <br>
-        Mes expériences professionnelles et personnelles m'ont aujourd'hui permis d'acquérir de solides compétences dans le développement. <br>
-        Je suis à la recherche de nouveaux challenges et missions passionnantes
+        Passionné depuis toujours par le secteur du web, je suis un développeur autodidacte.
+      </p>
+      <p class="mb-4">
+        Mes expériences professionnelles et personnelles me permettent d'être aujourd'hui un développeur Javascript confirmé, spécialisé en Front-End avec VueJS.
       </p>
       <button
         class="btn btn-primary-outline"
@@ -82,7 +83,7 @@
           },
           {
             label: 'Âge',
-            value: '29 ans (03 février 1990)'
+            value: '29 ans'
           },
           {
             label: 'Localisation',
@@ -98,7 +99,7 @@
   .section-profile {
     &__picture {
       img {
-        border: 8px solid white;
+        border: 4px solid white;
         height: 300px;
         width: 300px;
         border-radius: 50%;
@@ -128,6 +129,9 @@
           margin-right: 0;
         }
       }
+    }
+    @media screen and (max-width: $breakpoint-laptop-s) {
+      flex-direction: column;
     }
   }
 </style>

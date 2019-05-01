@@ -1,6 +1,8 @@
 <template>
   <div class="section-experiences">
-    experiences
+    <h2 class="text-white text-center mb-4">
+      Expériences
+    </h2>
   </div>
 </template>
 
