@@ -76,12 +76,14 @@
         </button>
       </div>
     </form>
-    <p
-      v-for="contact in contacts"
-      :key="contact._id"
-    >
-      {{ contact }}
-    </p>
+    <div class="bg-white br-4 p-4 mb-4 text-muted">
+      <p
+        v-for="contact in getContacts"
+        :key="contact._id"
+      >
+        {{ contact }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -91,6 +93,8 @@
   import 'vue-phone-number-input/dist/vue-phone-number-input.css'
 
   import { Contact } from '@/resources'
+
+  import { mapActions, mapGetters } from 'vuex'
 
   export default {
     name: 'Contact',
@@ -118,13 +122,17 @@
         }
       }
     },
+    computed: {
+      ...mapGetters(['getContacts'])
+    },
     mounted () {
       Contact.get()
         .then(({ data }) => {
-          this.contacts = data
+          this.setContacts(data)
         })
     },
     methods: {
+      ...mapActions(['setContacts']),
       addContact () {
         const payload = {
           name: this.name,

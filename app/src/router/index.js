@@ -28,6 +28,11 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "features" */ '@/views/Features')
     },
     {
+      path: '/admin',
+      name: 'Admin',
+      component: () => import(/* webpackChunkName: "admin" */ '@/views/Admin')
+    },
+    {
       path: '*',
       redirect: { name: 'Home' }
     }

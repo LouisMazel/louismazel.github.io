@@ -23,7 +23,7 @@
           href="https://github.com/LouisMazel/louismazel.github.io"
           title="loïc mazuel link to github project"
           target="_blank"
-          class="fs-14"
+          class="fs-14 text-white-muted"
         >
           © Loïc Mazuel | Site réalisé avec VueJS & NodeJS
         </a>
@@ -37,7 +37,11 @@
     name: 'NavFooter',
     data () {
       return {
-        routes: this.$router.options.routes.filter(route => typeof route.name !== 'undefined' && route.name !== 'Home')
+        routes: this.$router.options.routes.filter(
+          route => typeof route.name !== 'undefined' &&
+            route.name !== 'Home' &&
+            route.name !== 'Admin'
+        )
       }
     }
   }

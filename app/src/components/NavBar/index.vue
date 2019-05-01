@@ -32,7 +32,11 @@
     name: 'NavBar',
     data () {
       return {
-        routes: this.$router.options.routes.filter(route => typeof route.name !== 'undefined' && route.name !== 'Home')
+        routes: this.$router.options.routes.filter(
+          route => typeof route.name !== 'undefined' &&
+            route.name !== 'Home' &&
+            route.name !== 'Admin'
+        )
       }
     }
   }

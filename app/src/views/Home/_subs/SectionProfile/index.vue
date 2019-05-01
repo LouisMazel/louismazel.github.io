@@ -1,26 +1,26 @@
 <template>
-  <div class="section-profile py-5 flex container">
-    <div class="section-profile__about-me flex-1">
+  <div class="section-profile flex container">
+    <div class="section-profile__about-me flex-1 pr-3">
       <h2 class="mb-4">
         À propos
       </h2>
       <p class="mb-4">
         Passionné depuis toujours par le secteur du web, je suis un développeur autodidacte. <br>
         Mes expériences professionnelles et personnelles m'ont aujourd'hui permis d'acquérir de solides compétences dans le développement. <br>
-        Je recherche de nouveaux challenges au sein d'une équipe dynamique
+        Je suis à la recherche de nouveaux challenges et missions passionnantes
       </p>
       <button class="btn">
         Mon CV
       </button>
     </div>
-    <div class="section-profile__picture flex-1 flex justify-content-center align-center">
+    <div class="section-profile__picture flex-1 flex justify-content-center align-center px-3">
       <img
         src="@/assets/img/loic-mazuel.jpg"
         class="profile-container-picture__picture"
         alt="personal picture"
       >
     </div>
-    <div class="section-profile__picture flex-1">
+    <div class="section-profile__picture flex-1 pl-3">
       <h2 class="mb-4">
         Informations
       </h2>
@@ -56,12 +56,12 @@
 
 <style lang="scss" scoped>
   .section-profile {
-    &__about-me {
-    }
     &__picture {
       img {
         border: 8px solid white;
         height: 300px;
+          width: 300px;
+        border-radius: 50%;
       }
     }
   }
