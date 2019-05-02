@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "lint": "eslint *.js",
-    "lint:fix": "eslint *.js --fix"
+    "lint": "eslint models middleware controllers routes utils config",
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [
     "node.js",
