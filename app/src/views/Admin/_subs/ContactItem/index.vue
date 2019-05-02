@@ -19,18 +19,22 @@
       label="Message"
       :value="contact.message"
     />
-    <div class="actions">
+    <div class="contact-item__actions flex justify-content-end">
       <button
-        class="btn btn-primary-outline btn-sm"
+        class="btn btn-primary-outline btn-sm dots-text"
         @click="readed"
       >
-        {{ contact.readed ? 'Non Vu' : 'Vu' }}
+        <i class="material-icons">
+          {{ contact.readed ? 'visibility' : 'visibility_off' }}
+        </i>
       </button>
       <button
-        class="btn btn-danger-outline btn-sm ml-3 flex align-center justify-content-center"
+        class="btn btn-danger-outline btn-sm ml-3 dots-text"
         @click="remove"
       >
-        Supprimer
+        <i class="material-icons">
+          delete
+        </i>
       </button>
     </div>
   </div>
@@ -84,6 +88,9 @@
     &.readed {
       background-color: $background-color;
       border: 1px solid $background-color-light;
+    }
+    &__actions {
+      width: 135px;
     }
   }
 </style>

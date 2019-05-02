@@ -3,7 +3,7 @@
     <p class="label text-white-muted">
       {{ label }}
     </p>
-    <p class="value">
+    <p class="value dots-text">
       {{ value || '-' }}
     </p>
   </div>

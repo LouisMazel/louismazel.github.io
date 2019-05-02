@@ -24,6 +24,7 @@ button {
 
 .btn {
   text-decoration: none !important;
+  line-height: normal;
 
   &-rounded {
     border-radius: 42px;
@@ -31,6 +32,7 @@ button {
 
   &-sm {
     font-size: 14px;
+    line-height: normal;
 
     &.btn-rounded {
       border-radius: 36px;
@@ -38,6 +40,8 @@ button {
   }
 
   &-lg {
+    line-height: normal;
+
     &.btn-rounded {
       border-radius: 48px;
     }
@@ -55,4 +59,9 @@ button {
 
 .bg-white {
   background-color: white;
+}
+
+.flex-1 {
+  min-width: 0;
+  min-height: 0;
 }
