@@ -13,22 +13,14 @@ Vue.http.interceptors.push((request, next) => {
     request.headers.set('csrf-token', `${token}`)
   }
 
-  if (request.url.includes('auth')) request.credentials = true
+  request.credentials = true
 
   next()
 })
 
-export const Contact = Vue.resource('contacts', {}, {
-  add: {
-    method: 'POST',
-    url: 'contacts'
-  },
-  delete: {
-    method: 'DELETE',
-    url: 'contacts{/id}'
-  }
-})
+export const Contact = Vue.resource('contacts{/id}', {}, {})
 
 export const Login = Vue.resource('auth/login', {}, {})
 export const Register = Vue.resource('auth/register', {}, {})
+export const Logout = Vue.resource('auth/logout', {}, {})
 export const Me = Vue.resource('auth/me', {}, {})

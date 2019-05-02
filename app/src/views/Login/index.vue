@@ -49,7 +49,7 @@
 <script>
   import VueInputUi from 'vue-input-ui'
 
-  import { Register, Login } from '@/resources'
+  import { Login } from '@/resources'
   import { mapActions } from 'vuex'
 
   export default {
@@ -64,13 +64,17 @@
       }
     },
     methods: {
-      ...mapActions(['setToken']),
+      ...mapActions(['setToken', 'setIsLoggedIn']),
       login () {
         Login.save({
           email: this.email,
           password: this.password
         })
-          .then(({ data }) => this.setToken(data.csrfToken))
+          .then(({ data }) => {
+            this.setToken(data.csrfToken)
+            this.setIsLoggedIn(true)
+            this.$router.push({ name: 'Admin' })
+          })
       }
     }
   }

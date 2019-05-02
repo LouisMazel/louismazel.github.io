@@ -13,7 +13,8 @@ exports.create = (req, res) => {
 		name: req.body.name, 
 		email: req.body.email,
 		phone: req.body.phone,
-		message: req.body.message
+		message: req.body.message,
+		readed: false
 	})
 
 	// Save Contact in the database
@@ -75,7 +76,8 @@ exports.update = (req, res) => {
 		name: req.body.name || 'No contact name', 
 		email: req.body.email,
 		phone: req.body.phone,
-		message: req.body.message
+		message: req.body.message,
+		readed: req.body.readed
 	}, {new: true})
 		.then(contact => {
 			if(!contact) {

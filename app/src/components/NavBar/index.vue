@@ -22,12 +22,29 @@
         >
           {{ route.name }}
         </router-link>
+        <router-link
+          v-if="getIsLoggedIn"
+          :to="{ name: 'Admin' }"
+          class="nav-bar-item nav-bar-item__admin  p-3 flex align-center"
+        >
+          Admin
+        </router-link>
+        <button
+          class="nav-bar-item nav-bar-item__logout p-3 flex align-center"
+          v-if="getIsLoggedIn"
+          @click="logout"
+        >
+          Se déconnecter
+        </button>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+  import { Logout } from '@/resources'
+  import { mapActions, mapGetters } from 'vuex'
+
   export default {
     name: 'NavBar',
     data () {
@@ -35,8 +52,25 @@
         routes: this.$router.options.routes.filter(
           route => typeof route.name !== 'undefined' &&
             route.name !== 'Home' &&
-            route.name !== 'Admin'
+            route.name !== 'Admin' &&
+            route.name !== 'Login'
         )
+      }
+    },
+    computed: {
+      ...mapGetters(['getIsLoggedIn'])
+    },
+    methods: {
+      ...mapActions(['resetToken', 'setIsLoggedIn']),
+      logout () {
+        Logout.update()
+          .then(() => {
+            this.resetToken(null)
+            this.setIsLoggedIn(false)
+            if (this.$route.name === 'Admin') {
+              this.$router.push({ name: 'Home' })
+            }
+          })
       }
     }
   }
@@ -90,6 +124,20 @@
 
         span {
           color: $brand-color;
+        }
+      }
+      &__admin {
+        background-color: dodgerblue;
+        &:hover,
+        &:focus {
+          background-color: darken(dodgerblue, 20%);
+        }
+      }
+      &__logout {
+        background-color: orangered;
+        &:hover,
+        &:focus {
+          background-color: darken(orangered, 20%);
         }
       }
     }

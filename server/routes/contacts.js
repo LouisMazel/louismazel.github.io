@@ -12,7 +12,7 @@ module.exports = (app) => {
 	app.get('/api/contacts', authenticate, contacts.findAll)
 
 	// Retrieve a single Product with contactId
-	app.get('/api/contacts/:contactId', authenticate, csrfCheck, contacts.find)
+	app.get('/api/contacts/:contactId', authenticate, contacts.find)
 
 	// Update a Note with contactId
 	app.put('/api/contacts/:contactId', authenticate, csrfCheck, contacts.update)

@@ -66,27 +66,8 @@
         >
           Add contact
         </button>
-        <button
-          type="button"
-          class="btn btn-danger"
-          @click.stop="removeContact"
-          :disabled="$wait.is('contact deleting')"
-        >
-          Remove contact
-        </button>
       </div>
     </form>
-    <div
-      v-if="getContacts.length"
-      class="bg-white br-4 p-4 mb-4 text-muted"
-    >
-      <p
-        v-for="contact in getContacts"
-        :key="contact._id"
-      >
-        {{ contact }}
-      </p>
-    </div>
   </div>
 </template>
 
@@ -95,7 +76,7 @@
   import VuePhoneNumberInput from 'vue-phone-number-input'
   import 'vue-phone-number-input/dist/vue-phone-number-input.css'
 
-  import { Contact, Me } from '@/resources'
+  import { Contact } from '@/resources'
 
   import { mapActions, mapGetters } from 'vuex'
 
@@ -134,13 +115,6 @@
     computed: {
       ...mapGetters(['getContacts'])
     },
-    mounted () {
-      Contact.get()
-        .then(({ data }) => {
-          this.setContacts(data)
-        })
-      this.$http.get(`http://localhost:4000/api/contacts`, { emulateJSON: true, withCredentials: true })
-    },
     methods: {
       ...mapActions(['setContacts']),
       addContact () {
@@ -155,16 +129,8 @@
             if (!valid) {
               return
             }
-            Contact.add({}, payload)
+            Contact.save({}, payload)
           })
-      },
-      removeContact () {
-        this.$wait.start('contact deleting')
-        Contact.delete({
-          id: this.contacts[this.contacts.length - 1]._id
-        })
-          .then(() => console.log('Delete'))
-          .finally(() => this.$wait.end('contact deleting'))
       }
     }
   }
