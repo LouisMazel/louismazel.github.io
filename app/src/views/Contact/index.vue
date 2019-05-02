@@ -168,9 +168,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  .field .field-input {
-    background-color: $background-color-light !important;
-  }
-</style>

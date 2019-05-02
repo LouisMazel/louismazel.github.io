@@ -16,7 +16,7 @@
     "vee-validate": "^2.2.5",
     "vue": "^2.6.10",
     "vue-analytics": "^5.16.4",
-    "vue-input-ui": "^0.2.1",
+    "vue-input-ui": "^0.2.4",
     "vue-meta": "^1.6.0",
     "vue-phone-number-input": "^0.1.8",
     "vue-resource": "^1.5.1",
