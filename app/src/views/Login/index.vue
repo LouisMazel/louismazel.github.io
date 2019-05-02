@@ -49,6 +49,9 @@
 <script>
   import VueInputUi from 'vue-input-ui'
 
+  import { Register, Login } from '@/resources'
+  import { mapActions } from 'vuex'
+
   export default {
     name: 'Login',
     components: {
@@ -61,8 +64,13 @@
       }
     },
     methods: {
+      ...mapActions(['setToken']),
       login () {
-        console.log('login')
+        Register.save({
+          email: this.email,
+          password: this.password
+        })
+          .then(({ data }) => this.setToken(data.csrfToken))
       }
     }
   }

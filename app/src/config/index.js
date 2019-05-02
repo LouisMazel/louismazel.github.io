@@ -1,7 +1,7 @@
 
 module.exports = {
   apiBase: {
-    development: 'http://localhost:4000',
+    development: 'http://localhost:4000/api',
     production: 'API_ENDPOINT'
   },
   rollbar: {
