@@ -28,7 +28,7 @@
           :error="errors.has('password')"
           :hint="errors.first('password')"
           :data-vv-as="'mot de passe'"
-          v-validate="'required|min:6'"
+          v-validate="'required|min:8'"
           dark
           required
         />
