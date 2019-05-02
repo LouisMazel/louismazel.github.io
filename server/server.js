@@ -19,15 +19,15 @@ mongoose.connect(getSecret('dbUri'), { useNewUrlParser: true }).then(
 const app = express();
 const port = process.env.PORT || getSecret('serverport');
 
+app.use(bodyParser.json());
+app.use(cookieParser());
+
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS")
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, csrf-token")
   next()
 });
-
-app.use(bodyParser.json());
-app.use(cookieParser());
 
 usersRoute(app)
 contactsRoute(app)

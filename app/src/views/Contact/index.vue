@@ -95,7 +95,7 @@
   import VuePhoneNumberInput from 'vue-phone-number-input'
   import 'vue-phone-number-input/dist/vue-phone-number-input.css'
 
-  import { Contact } from '@/resources'
+  import { Contact, Me } from '@/resources'
 
   import { mapActions, mapGetters } from 'vuex'
 

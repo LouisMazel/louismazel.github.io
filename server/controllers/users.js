@@ -18,7 +18,6 @@ exports.create = async (req, res) => {
     const userId = persistedUser._id;
 
     const session = await initSession(userId);
-
     res
       .cookie('token', session.token, {
         httpOnly: true,
@@ -80,7 +79,6 @@ exports.login = async (req, res) => {
     }
 
     const session = await initSession(userId);
-
     res
       .cookie('token', session.token, {
         httpOnly: true,

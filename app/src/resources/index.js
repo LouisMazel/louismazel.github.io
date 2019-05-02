@@ -28,3 +28,4 @@ export const Contact = Vue.resource('contacts', {}, {
 
 export const Login = Vue.resource('auth/login', {}, {})
 export const Register = Vue.resource('auth/register', {}, {})
+export const Me = Vue.resource('auth/me', {}, {})

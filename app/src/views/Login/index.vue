@@ -66,7 +66,7 @@
     methods: {
       ...mapActions(['setToken']),
       login () {
-        Register.save({
+        Login.save({
           email: this.email,
           password: this.password
         })
