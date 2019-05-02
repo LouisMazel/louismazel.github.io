@@ -12,6 +12,9 @@ Vue.http.interceptors.push((request, next) => {
   if (token) {
     request.headers.set('csrf-token', `${token}`)
   }
+
+  if (request.url.includes('auth')) request.credentials = true
+
   next()
 })
 

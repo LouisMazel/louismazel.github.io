@@ -13,8 +13,8 @@ const csrfCheck = async (req, res, next) => {
           title: 'Unauthorized',
           detail: 'CSRF has been attempted.',
           errorMessage: err.message,
-        },
-      ],
+        }
+      ]
     });
   }
 };

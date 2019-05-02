@@ -135,10 +135,10 @@
       ...mapGetters(['getContacts'])
     },
     mounted () {
-      // Contact.get()
-      //   .then(({ data }) => {
-      //     this.setContacts(data)
-      //   })
+      Contact.get()
+        .then(({ data }) => {
+          this.setContacts(data)
+        })
       this.$http.get(`http://localhost:4000/api/contacts`, { emulateJSON: true, withCredentials: true })
     },
     methods: {
