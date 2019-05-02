@@ -9,7 +9,7 @@ module.exports = (app) => {
   app.post('/api/contacts', contacts.create)
 
   // Retrieve all contacts
-  app.get('/api/contacts', authenticate, csrfCheck, contacts.findAll)
+  app.get('/api/contacts', authenticate, contacts.findAll)
 
   // Retrieve a single Product with contactId
   app.get('/api/contacts/:contactId', authenticate, csrfCheck, contacts.find)

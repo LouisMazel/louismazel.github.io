@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator');
-const crypto = require('crypto');
+const mongoose = require('mongoose')
+const uniqueValidator = require('mongoose-unique-validator')
+const crypto = require('crypto')
 
 const SessionSchema = new mongoose.Schema({
   token: {
@@ -26,29 +26,29 @@ const SessionSchema = new mongoose.Schema({
     enum: ['valid', 'expired'],
     default: 'valid',
   },
-});
+})
 
-SessionSchema.plugin(uniqueValidator);
+SessionSchema.plugin(uniqueValidator)
 
 SessionSchema.statics.generateToken = function() {
   return new Promise((resolve, reject) => {
     crypto.randomBytes(16, (err, buf) => {
       if (err) {
-        reject(err);
+        reject(err)
       }
-      const token = buf.toString('hex');
-      resolve(token);
-    });
-  });
-};
+      const token = buf.toString('hex')
+      resolve(token)
+    })
+  })
+}
 
 SessionSchema.statics.expireAllTokensForUser = function(userId) {
-  return this.updateMany({ userId }, { $set: { status: 'expired' } });
-};
+  return this.updateMany({ userId }, { $set: { status: 'expired' } })
+}
 
 SessionSchema.methods.expireToken = function() {
-  const session = this;
-  return session.update({ $set: { status: 'expired' } });
-};
+  const session = this
+  return session.update({ $set: { status: 'expired' } })
+}
 
-module.exports = mongoose.model('Session', SessionSchema);
+module.exports = mongoose.model('Session', SessionSchema)

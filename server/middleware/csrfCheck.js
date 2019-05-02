@@ -1,3 +1,6 @@
+const User = require('../models/user');
+const Session = require('../models/session');
+
 const csrfCheck = async (req, res, next) => {
   try {
     const { csrfToken } = req.session;

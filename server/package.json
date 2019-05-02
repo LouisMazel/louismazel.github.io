@@ -4,7 +4,9 @@
   "description": "Boilerplate for very basic node + express.js user registration/authentication.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "lint": "eslint *.js",
+    "lint:fix": "eslint *.js --fix"
   },
   "keywords": [
     "node.js",
@@ -25,6 +27,7 @@
     "nodemon": "^1.18.11"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
     "nodemon": "^1.17.5"
   }
 }
