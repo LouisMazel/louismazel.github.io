@@ -1,4 +1,4 @@
-const Contacts = require('./../models/Contacts.js')
+const Contact = require('./../models/Contact.js')
 
 // Create new Contact
 exports.create = (req, res) => {
@@ -9,7 +9,7 @@ exports.create = (req, res) => {
         })
     }
     // Create a Contact
-    const contact = new Contacts({
+    const contact = new Contact({
         name: req.body.name, 
         email: req.body.email,
         phone: req.body.phone,
@@ -29,7 +29,7 @@ exports.create = (req, res) => {
 
 // Retrieve all contacts from the database.
 exports.findAll = (req, res) => {
-    Contacts.find()
+    Contact.find()
     .then(contacts => {
         res.send(contacts)
     }).catch(err => {
@@ -40,8 +40,8 @@ exports.findAll = (req, res) => {
 }
 
 // Find a single contact with a contactId
-exports.findOne = (req, res) => {
-    Contacts.findById(req.params.contactId)
+exports.find = (req, res) => {
+    Contact.findById(req.params.contactId)
     .then(contact => {
         if(!contact) {
             return res.status(404).send({
@@ -71,7 +71,7 @@ exports.update = (req, res) => {
     }
 
     // Find and update contact with the request body
-    Contacts.findByIdAndUpdate(req.params.contactId, {
+    Contact.findByIdAndUpdate(req.params.contactId, {
         name: req.body.name || 'No contact name', 
         email: req.body.email,
         phone: req.body.phone,
@@ -98,7 +98,7 @@ exports.update = (req, res) => {
 
 // Delete a note with the specified noteId in the request
 exports.delete = (req, res) => {
-    Contacts.findByIdAndRemove(req.params.contactId)
+    Contact.findByIdAndRemove(req.params.contactId)
     .then(contact => {
         if(!contact) {
             return res.status(404).send({

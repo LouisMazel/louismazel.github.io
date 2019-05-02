@@ -3,7 +3,7 @@
 In `root` folder
 
 ```bash
-  cp db/config/index.js.dist db/config/index.js
+  cp sever/config/index.js.dist server/config/index.js
 ```
 
 ## Start database server

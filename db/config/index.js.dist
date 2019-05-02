@@ -1,7 +1,0 @@
-module.exports = {
-  url: {
-    development: 'mongodb://localhost:27017/<your_db_name>',
-    production: '<private_mongodb_cluster_url>'
-  },
-  serverport: 4000
-}

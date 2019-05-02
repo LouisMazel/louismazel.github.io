@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const Contacts = mongoose.Schema({
+const Contact = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -18,4 +18,4 @@ const Contacts = mongoose.Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model('Contacts', Contacts)
+module.exports = mongoose.model('Contact', Contact)
