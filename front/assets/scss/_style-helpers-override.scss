@@ -1,0 +1,61 @@
+@import './_variables';
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+.btn {
+  text-decoration: none !important;
+
+  &-rounded {
+    border-radius: 42px;
+  }
+
+  &-sm {
+    font-size: 14px;
+
+    &.btn-rounded {
+      border-radius: 36px;
+    }
+  }
+
+  &-lg {
+
+    &.btn-rounded {
+      border-radius: 48px;
+    }
+  }
+
+  &-disabled,
+  &:disabled {
+    background-color: $grey-color;
+  }         
+}
+
+.text-white-muted {
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.bg-white {
+  background-color: white;
+}
