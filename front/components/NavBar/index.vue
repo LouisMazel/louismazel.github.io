@@ -68,7 +68,7 @@
             this.resetToken(null)
             this.setIsLoggedIn(false)
             if (this.$route.name === 'admin') {
-              this.$router.push({ name: 'Home' })
+              this.$router.push({ name: 'index' })
             }
           })
       }

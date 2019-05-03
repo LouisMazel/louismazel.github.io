@@ -12,5 +12,5 @@ module.exports = (app) => {
   
 	app.delete('/api/auth/me', authenticate, csrfCheck, users.delete)
   
-	app.put('/api/auth/logout', authenticate, csrfCheck, users.logout) 
+	app.put('/api/auth/logout', authenticate, users.logout) 
 }

@@ -12,7 +12,11 @@
 <script>
   import NavBar from '@/components/NavBar'
   import NavFooter from '@/components/NavFooter'
+
+  import auth from '@/mixins/auth'
+  
   export default {
+    mixins: [auth],
     components: {
       NavBar,
       NavFooter

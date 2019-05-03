@@ -50,6 +50,7 @@
   import VueInputUi from 'vue-input-ui'
 
   import { Login } from '@/resources'
+  import { getters, state } from '@/store'
   import { mapActions } from 'vuex'
 
   export default {
@@ -76,7 +77,12 @@
             this.$router.push({ name: 'admin' })
           })
       }
-    }
+    },
+    // beforeRouteEnter (to, from, next) {
+    //   console.log('getters', getters['getIsLoggedIn'], state.isLoggedIn)
+    //   const isLoggedIn = getters['getIsLoggedIn']
+    //   isLoggedIn ? next({ name: 'index' }) : next()
+    // }
   }
 </script>
 

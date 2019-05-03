@@ -4,7 +4,7 @@
     role="banner"
   >
     <div class="container flex justify-content-between">
-      <router-link
+      <nuxt-link
         :to="{ name: 'Home' }"
         class="nav-bar-item nav-bar-item__main p-3 pl-4"
       >
@@ -12,23 +12,23 @@
           Loïc Mazuel <br>
           <span class="fs-14">Developer Full Stack Javascript | VueJS</span>
         </h1>
-      </router-link>
+      </nuxt-link>
       <div class="nav-bar-items flex">
-        <router-link
+        <nuxt-link
           v-for="route in routes"
           :key="route.name"
           :to="{ name: route.name }"
           class="nav-bar-item p-3 flex align-center"
         >
           {{ route.name }}
-        </router-link>
-        <router-link
+        </nuxt-link>
+        <nuxt-link
           v-if="getIsLoggedIn"
           :to="{ name: 'Admin' }"
           class="nav-bar-item nav-bar-item__admin  p-3 flex align-center"
         >
           Admin
-        </router-link>
+        </nuxt-link>
         <button
           class="nav-bar-item nav-bar-item__logout p-3 flex align-center"
           v-if="getIsLoggedIn"

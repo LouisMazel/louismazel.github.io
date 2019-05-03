@@ -62,7 +62,7 @@ router.beforeEach((to, from, next) => {
   const isLoggedIn = store.getters['getIsLoggedIn']
   if (!isLoggedIn && requiresAuth) {
     Me.get()
-      .then(() => { store.dispatch('setIsLoggedIn', true) })
+      .then(() => store.dispatch('setIsLoggedIn', true))
       .finally(() => next())
   } else {
     next()
