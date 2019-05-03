@@ -37,7 +37,6 @@
       Contact.get()
         .then(({ data }) => this.setContacts(data))
         .catch(() => console.error('Error get contacts'))
-      console.log('sotre', this.$store.state)
     },
     methods: {
       ...mapActions(['setContacts'])
