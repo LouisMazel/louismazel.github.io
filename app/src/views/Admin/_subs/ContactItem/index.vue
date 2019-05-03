@@ -30,30 +30,50 @@
       </button>
       <button
         class="btn btn-danger-outline btn-sm ml-3 dots-text"
-        @click="remove"
+        @click="confirmDeleteDialog = true"
       >
         <i class="material-icons">
           delete
         </i>
       </button>
     </div>
+    <lm-dialog
+      v-if="confirmDeleteDialog"
+      @handle-close="confirmDeleteDialog = false"
+      @validate="remove"
+    >
+      <div slot="title">
+        Confirmation
+      </div>
+      <div class="p-3">
+        Êtes-vous sûr de vouloir supprimer cette demande de contact ?
+      </div>
+    </lm-dialog>
   </div>
 </template>
 
 <script>
   import { Contact } from '@/resources'
-  import ContactItemValue from './_subs/ContactItemValue'
   import { mapActions } from 'vuex'
+
+  import ContactItemValue from './_subs/ContactItemValue'
+  import LmDialog from '@/components/LmDialog'
 
   export default {
     name: 'ContactItem',
     components: {
-      ContactItemValue
+      ContactItemValue,
+      LmDialog
     },
     props: {
       contact: {
         type: Object,
         required: true
+      }
+    },
+    data () {
+      return {
+        confirmDeleteDialog: false
       }
     },
     methods: {

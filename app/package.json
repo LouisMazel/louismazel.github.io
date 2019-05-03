@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "style-helpers": "^0.2.2",
+    "v-click-outside": "^2.1.1",
     "vee-validate": "^2.2.5",
     "vue": "^2.6.10",
     "vue-analytics": "^5.16.4",
