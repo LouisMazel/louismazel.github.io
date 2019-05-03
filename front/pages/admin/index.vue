@@ -22,8 +22,11 @@
   import { getters } from '@/store'
   import state from '@/store/state'
 
+  import auth from '@/mixins/auth'
+
   export default {
     name: 'Admin',
+    mixins: [auth],
     components: {
       ContactItem
     },
