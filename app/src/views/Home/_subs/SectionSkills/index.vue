@@ -4,34 +4,59 @@
       Compétences
     </h2>
     <div class="section-skills__items flex">
-      <div class="flex-1 flex flex-direction-column align-center section-skills__items__skill px-4">
-        <img src="@/assets/img/skills/node.svg" alt="node js">
-        <h3 class="label py-4 text-white">
-          Back-End
-        </h3>
-        <p class="description text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
-        </p>
-      </div>
+      <section-skills-item
+        v-for="(skill, i) in skills"
+        :key="i"
+        :skill="skill"
+      />
     </div>
   </div>
 </template>
 
 <script>
+  import SectionSkillsItem from './_subs/SectionSkillsItem'
+
   export default {
-    name: 'SectionSkills'
+    name: 'SectionSkills',
+    components: {
+      SectionSkillsItem
+    },
+    data () {
+      return {
+        skills: [
+          {
+            title: 'Back-End',
+            label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            asset: require('@/assets/img/skills/node.svg')
+          },
+          {
+            title: 'Front-End',
+            label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            asset: require('@/assets/img/skills/vue.svg')
+          },
+          {
+            title: 'Nuxt',
+            label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            asset: require('@/assets/img/skills/nuxt.svg')
+          },
+          {
+            title: 'Mobile',
+            label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            asset: require('@/assets/img/skills/react.svg')
+          },
+          {
+            title: 'SEO',
+            label: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            asset: require('@/assets/img/skills/node.svg')
+          }
+        ]
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
   .section-skills {
     background-color: $background-color-light;
-
-    &__items__skill {
-      img {
-        max-width: 100%;
-        max-height: 100px;
-      }
-    }
   }
 </style>
