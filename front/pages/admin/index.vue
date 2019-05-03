@@ -23,7 +23,7 @@
   import state from '@/store/state'
 
   export default {
-    name: 'admin',
+    name: 'Admin',
     components: {
       ContactItem
     },
@@ -38,7 +38,7 @@
     },
     methods: {
       ...mapActions(['setContacts'])
-    },
+    }
     // beforeRouteEnter (to, from, next) {
     //   console.log('getters', getters['getIsLoggedIn'], state(), state().isLoggedIn)
     //   const isLoggedIn = getters['getIsLoggedIn']

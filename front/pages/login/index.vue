@@ -77,7 +77,7 @@
             this.$router.push({ name: 'admin' })
           })
       }
-    },
+    }
     // beforeRouteEnter (to, from, next) {
     //   console.log('getters', getters['getIsLoggedIn'], state.isLoggedIn)
     //   const isLoggedIn = getters['getIsLoggedIn']

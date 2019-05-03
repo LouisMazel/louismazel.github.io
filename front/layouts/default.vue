@@ -14,9 +14,9 @@
   import NavFooter from '@/components/NavFooter'
 
   import auth from '@/mixins/auth'
-  
+
   export default {
-    mixins: [auth],
+    mixins: [auth],
     components: {
       NavBar,
       NavFooter

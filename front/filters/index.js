@@ -5,7 +5,6 @@ import capitalize from './capitalize'
 import uppercase from './uppercase'
 import telephone from './telephone'
 
-
 const filters = {
   currency,
   capitalize,

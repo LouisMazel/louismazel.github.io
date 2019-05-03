@@ -6,7 +6,7 @@
 @import './../icons/index';
 
 html,
-body, 
+body,
 #__nuxt,
 #__layout {
   font: $base-font-weight 16px/1.5 $base-font-family;
@@ -61,30 +61,34 @@ h6 {
   font-weight: 400;
   color: $brand-color;
 }
-
+/* stylelint-disable */
 .field {
   .field-input {
     background-color: $background-color-light !important;
   }
+
   &.is-dark {
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
-    input:-webkit-autofill:active  {
+    input:-webkit-autofill:active {
       box-shadow: 0 0 0 30px white inset !important;
       -webkit-box-shadow: 0 0 0 30px white inset !important;
     }
+
     &.is-dark {
       input:-webkit-autofill,
       input:-webkit-autofill:hover,
       input:-webkit-autofill:focus,
-      input:-webkit-autofill:active  {
+      input:-webkit-autofill:active {
         box-shadow: 0 0 0 30px $background-color-light inset !important;
         -webkit-box-shadow: 0 0 0 30px $background-color-light inset !important;
       }
+
       input:-webkit-autofill {
         -webkit-text-fill-color: rgba(white, 0.70) !important;
       }
     }
   }
 }
+/* stylelint-enable */

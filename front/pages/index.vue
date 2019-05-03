@@ -15,8 +15,6 @@
   import SectionOpenSource from '@/components/Sections/SectionOpenSource'
   import SectionExperiences from '@/components/Sections/SectionExperiences'
 
-  import auth from '@/mixins/auth'
-
   export default {
     name: 'Home',
     metaInfo () {

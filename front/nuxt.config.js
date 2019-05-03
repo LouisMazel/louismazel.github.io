@@ -26,6 +26,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/style-resources',
+    'nuxt-material-design-icons',
     ['vue-wait/nuxt', { useVuex: true }]
   ],
   styleResources: {
@@ -49,4 +50,3 @@ module.exports = {
     }
   }
 }
-
