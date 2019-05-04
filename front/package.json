@@ -20,9 +20,12 @@
     "lint:style": "stylelint 'pages/**/*.css' 'pages/**/*.css' 'assets/**/*.scss' 'assets/**/*.scss' 'pages/**/*.vue'"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.4.1",
+    "@nuxtjs/robots": "^2.1.0",
     "nuxt": "^2.0.0",
     "nuxt-material-design-icons": "^1.0.4",
     "style-helpers": "^0.2.2",
+    "universal-cookie": "^3.1.0",
     "vee-validate": "^2.2.5",
     "vue-input-ui": "^0.2.4",
     "vue-phone-number-input": "^0.1.8",
@@ -42,7 +45,6 @@
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-order": "^3.0.0",
-    "stylelint-scss": "^3.6.1",
-    "universal-cookie": "^3.1.0"
+    "stylelint-scss": "^3.6.1"
   }
 }

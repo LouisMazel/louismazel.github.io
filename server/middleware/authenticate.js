@@ -20,8 +20,8 @@ const authenticate = async (req, res, next) => {
 					title: 'Unauthorized',
 					detail: 'Authentication credentials invalid',
 					errorMessage: err.message,
-				},
-			],
+				}
+			]
 		})
 	}
 }

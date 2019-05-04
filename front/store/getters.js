@@ -4,8 +4,5 @@ export default {
   },
   getToken (state) {
     return state.token
-  },
-  getIsLoggedIn (state) {
-    return state.isLoggedIn
   }
 }

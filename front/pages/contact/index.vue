@@ -21,6 +21,7 @@
         :data-vv-as="'nom'"
         class="mb-3"
         v-validate="'required|max:255'"
+        clearable
         dark
       />
       <vue-input-ui
@@ -33,19 +34,21 @@
         :data-vv-as="'e-mail'"
         v-validate="'required|email'"
         class="mb-3"
+        clearable
         dark
       />
       <vue-phone-number-input
         v-model="phone"
         class="mb-3"
         label="Numéro de téléphone"
-        default-country="FR"
+        default-country-code="FR"
         :preferred-countries="['FR', 'BE', 'DE']"
         :translations="translations"
         type="tel"
         no-use-browser-locale
         name="phone"
         :data-vv-as="'Numéro de téléphone'"
+        clearable
         dark
       />
       <vue-input-ui
@@ -78,20 +81,15 @@
   import VuePhoneNumberInput from 'vue-phone-number-input'
   import 'vue-phone-number-input/dist/vue-phone-number-input.css'
 
-  import { Contact } from '@/resources'
-
   import { mapActions, mapGetters } from 'vuex'
 
   export default {
     name: 'Contact',
-    metaInfo () {
+    head () {
       return {
         title: 'Contact',
         meta: [
-          {
-            name: 'description',
-            content: 'Contactez-moi pour réaliser vos projets web'
-          }
+          { hid: 'description', name: 'description', content: 'Contactez-moi pour réaliser vos projets web' }
         ]
       }
     },
@@ -131,7 +129,9 @@
             if (!valid) {
               return
             }
-            Contact.save({}, payload)
+            this.$wait.start('contact adding')
+            this.$axios.post('/contacts', payload)
+              .finally(() => this.$wait.end('contact adding'))
           })
       }
     }

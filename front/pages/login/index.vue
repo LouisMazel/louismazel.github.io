@@ -52,6 +52,14 @@
 
   export default {
     name: 'Login',
+    head () {
+      return {
+        title: 'Se connecter',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Se connecter' }
+        ]
+      }
+    },
     components: {
       VueInputUi
     },

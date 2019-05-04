@@ -17,6 +17,14 @@
 
   export default {
     name: 'OpenSource',
+    head () {
+      return {
+        title: 'Mes librairies open-source',
+        meta: [
+          { hid: 'description', name: 'description', content: 'Contribuer à l\'écosystème open-source permet de tester de nouvelles technologies mais aussi de faire profiter des dernières inovations à un maximum d\'utilisateur' }
+        ]
+      }
+    },
     metaInfo () {
       return {
         title: 'Mes projets open-source',

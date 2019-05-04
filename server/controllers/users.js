@@ -25,6 +25,12 @@ exports.create = async (req, res) => {
 				maxAge: 1209600000,
 				secure: process.env.NODE_ENV === 'production',
 			})
+			.cookie('csrf-token', session.csrfToken, {
+				httpOnly: true,
+				sameSite: true,
+				maxAge: 1209600000,
+				secure: process.env.NODE_ENV === 'production',
+			})
 			.status(201)
 			.json({
 				title: 'User Registration Successful',
@@ -81,6 +87,12 @@ exports.login = async (req, res) => {
 		const session = await initSession(userId)
 		res
 			.cookie('token', session.token, {
+				httpOnly: true,
+				sameSite: true,
+				maxAge: 1209600000,
+				secure: process.env.NODE_ENV === 'production',
+			})
+			.cookie('csrf-token', session.csrfToken, {
 				httpOnly: true,
 				sameSite: true,
 				maxAge: 1209600000,
@@ -163,9 +175,11 @@ exports.delete = async (req, res) => {
 
 exports.logout = async (req, res) => {
 	try {
+		console.log('req.session', req.session)
 		const { session } = req
 		await session.expireToken(session.token)
 		res.clearCookie('token')
+		res.clearCookie('csrf-token')
 
 		res.json({
 			title: 'Logout Successful',

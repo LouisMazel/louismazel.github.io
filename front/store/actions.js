@@ -1,21 +1,19 @@
-import { Login } from '@/resources'
 import Cookies from 'universal-cookie'
 
 export default {
   nuxtServerInit ({ commit }, { req }) {
     const cookies = new Cookies(req.headers.cookie)
-    const token = cookies.get('token')
+    const token = cookies.get('csrf-token')
     commit('SET_TOKEN', token)
   },
   authLogin ({ commit }, payload) {
     const { email, password } = payload
-    Login.save({
+    this.$axios.$post('/auth/login', {
       email: email,
       password: password
     })
-      .then(({ data }) => {
+      .then((data) => {
         commit('SET_TOKEN', data.csrfToken)
-        commit('SET_IS_LOGGED_IN', true)
         this.$router.push({ name: 'admin' })
       })
   },
@@ -27,9 +25,6 @@ export default {
   },
   resetToken ({ commit }) {
     commit('RESET_TOKEN')
-  },
-  setIsLoggedIn ({ commit }, val) {
-    commit('SET_IS_LOGGED_IN', val)
   },
   deleteContact ({ commit }, uuid) {
     commit('DELETE_CONTACT', uuid)

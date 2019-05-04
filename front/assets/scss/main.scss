@@ -9,7 +9,8 @@ html,
 body,
 #__nuxt,
 #__layout {
-  font: $base-font-weight 16px/1.5 $base-font-family;
+  font: $base-font-weight $base-font-size $base-font-family;
+  line-height: $base-line-height;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;

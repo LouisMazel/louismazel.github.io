@@ -2,7 +2,7 @@
   <div class="admin">
     <div class="container">
       <div
-        v-if="getContacts.length"
+        v-if="getContacts"
         class="contact-list flex flex-direction-column py-4"
       >
         <contact-item
@@ -16,13 +16,17 @@
 </template>
 
 <script>
-  import { Contact } from '@/resources'
   import { mapActions, mapGetters } from 'vuex'
   import ContactItem from '@/components/ContactItem'
 
   export default {
     name: 'Admin',
     middleware: 'admin',
+    head () {
+      return {
+        title: 'Admin'
+      }
+    },
     components: {
       ContactItem
     },
@@ -30,8 +34,8 @@
       ...mapGetters(['getContacts'])
     },
     mounted () {
-      Contact.get()
-        .then(({ data }) => this.setContacts(data))
+      this.$axios.$get('/contacts')
+        .then((data) => this.setContacts(data))
         .catch(() => console.error('Error get contacts'))
     },
     methods: {

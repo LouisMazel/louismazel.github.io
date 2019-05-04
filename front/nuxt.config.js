@@ -1,9 +1,9 @@
+import config from './config'
+
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: 'Loïc Mazuel - Developer Full Stack Javascript | VueJS',
+    title: 'Developer Full Stack Javascript - VueJS',
+    titleTemplate: '%s | Loïc Mazuel',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -13,34 +13,43 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  router: {
-    middleware: 'auth'
-  },
   plugins: [
-    '~/plugins/VeeValidate',
-    '~/filters'
+    '~/filters',
+    '~/plugins/axios',
+    '~/plugins/vee-validate',
+    '~/plugins/rollbar'
   ],
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
+  loading: { color: 'dodgerblue' },
   modules: [
     '@nuxtjs/style-resources',
     'nuxt-material-design-icons',
-    ['vue-wait/nuxt', { useVuex: true }]
+    ['vue-wait/nuxt', { useVuex: true }],
+    '@nuxtjs/axios',
+    ['@nuxtjs/google-analytics', {
+      id: config.ga.id || '',
+      dev: true
+    }],
+    ['vue-wait/nuxt', { useVuex: true }],
+    ['@nuxtjs/robots']
   ],
   styleResources: {
     scss: [
       '@/assets/scss/_variables.scss'
     ]
   },
+  robots: [
+    {
+      UserAgent: '*',
+      Disallow: '/login'
+    }, {
+      UserAgent: '*',
+      Disallow: '/admin'
+    }
+  ],
   build: {
-    /*
-    ** Run ESLint on save
-    */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({

@@ -23,7 +23,7 @@
           {{ route.name }}
         </nuxt-link>
         <nuxt-link
-          v-if="getIsLoggedIn"
+          v-if="getToken"
           :to="{ name: 'admin' }"
           class="nav-bar-item nav-bar-item__admin  p-3 flex align-center"
         >
@@ -31,7 +31,7 @@
         </nuxt-link>
         <button
           class="nav-bar-item nav-bar-item__logout p-3 flex align-center"
-          v-if="getIsLoggedIn"
+          v-if="getToken"
           @click="logout"
         >
           Se déconnecter
@@ -42,7 +42,6 @@
 </template>
 
 <script>
-  import { Logout } from '@/resources'
   import { mapActions, mapGetters } from 'vuex'
 
   export default {
@@ -58,15 +57,14 @@
       }
     },
     computed: {
-      ...mapGetters(['getIsLoggedIn'])
+      ...mapGetters(['getToken'])
     },
     methods: {
-      ...mapActions(['resetToken', 'setIsLoggedIn']),
+      ...mapActions(['resetToken']),
       logout () {
-        Logout.update()
+        this.$axios.put('/auth/logout')
           .then(() => {
             this.resetToken(null)
-            this.setIsLoggedIn(false)
             if (this.$route.name === 'admin') {
               this.$router.push({ name: 'index' })
             }

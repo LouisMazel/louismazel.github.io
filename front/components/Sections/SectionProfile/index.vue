@@ -41,41 +41,21 @@
           </div>
         </div>
       </div>
-      <div class="section-profile__socials">
-        <a
-          v-for="social in socialMedias"
-          :key="social.name"
-          :title="social.name"
-          :href="social.url"
-          target="_blank"
-          class="btn btn-primary-outline btn-rounded"
-        >
-          <i :class="`icon-${social.name}`" />
-        </a>
-      </div>
+      <social-buttons />
     </div>
   </div>
 </template>
 
 <script>
+  import SocialButtons from '@/components/SocialButtons'
+
   export default {
     name: 'SectionProfile',
+    components: {
+      SocialButtons
+    },
     data () {
       return {
-        socialMedias: [
-          {
-            name: 'twitter',
-            url: 'https://twitter.com/Mazeel'
-          },
-          {
-            name: 'linkedin',
-            url: 'https://www.linkedin.com/in/lo%C3%AFc-mazuel-a2b37577/'
-          },
-          {
-            name: 'github',
-            url: 'https://github.com/LouisMazel/'
-          }
-        ],
         infos: [
           {
             label: 'Nom',
@@ -121,15 +101,6 @@
       }
     }
 
-    &__socials {
-      a {
-        margin-right: 10px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-    }
     @media screen and (max-width: $breakpoint-laptop-s) {
       flex-direction: column;
     }

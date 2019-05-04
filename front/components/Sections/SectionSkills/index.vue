@@ -1,9 +1,9 @@
 <template>
-  <div class="section-skills">
+  <div class="section-skills py-5">
     <h2 class="text-white text-center mb-4">
       Compétences
     </h2>
-    <div class="section-skills__items flex">
+    <div class="section-skills__items flex container">
       <section-skills-item
         v-for="(skill, i) in skills"
         :key="i"

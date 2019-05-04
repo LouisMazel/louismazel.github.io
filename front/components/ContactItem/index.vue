@@ -53,7 +53,6 @@
 </template>
 
 <script>
-  import { Contact } from '@/resources'
   import { mapActions } from 'vuex'
 
   import ContactItemValue from './_subs/ContactItemValue'
@@ -79,13 +78,13 @@
     methods: {
       ...mapActions(['deleteContact', 'setContactReaded']),
       remove () {
-        Contact.delete({ id: this.contact._id })
+        this.$axios.delete(`/contacts/${this.contact._id}`)
           .then(() => this.deleteContact(this.contact._id))
-          .catch(() => console.log('error'))
+          .catch((err) => console.log('remove error', err))
       },
       readed () {
         const id = this.contact._id
-        Contact.update({ id }, {
+        this.$axios.put(`/contacts/${id}`, {
           message: this.contact.message,
           email: this.contact.email,
           phone: this.contact.phone,
@@ -95,7 +94,7 @@
           .then(() => {
             this.setContactReaded({ uuid: this.contact._id, value: !this.contact.readed })
           })
-          .catch(() => console.log('error'))
+          .catch((err) => console.log('readed error', err))
       }
     }
   }

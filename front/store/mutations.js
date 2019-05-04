@@ -8,9 +8,6 @@ export default {
   RESET_TOKEN (state) {
     state.token = null
   },
-  SET_IS_LOGGED_IN (state, val) {
-    state.isLoggedIn = val
-  },
   DELETE_CONTACT (state, uuid) {
     state.contacts = state.contacts.filter((element) => { return element._id !== uuid })
   },

@@ -16,6 +16,9 @@
           </router-link>
         </li>
       </ul>
+      <div class="flex align-center">
+        <social-buttons />
+      </div>
     </div>
     <div class="nav-footer-subs py-2">
       <div class="container flex flex-end">
@@ -33,8 +36,13 @@
 </template>
 
 <script>
+  import SocialButtons from '@/components/SocialButtons'
+
   export default {
     name: 'NavFooter',
+    components: {
+      SocialButtons
+    },
     data () {
       return {
         routes: this.$router.options.routes.filter(

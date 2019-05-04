@@ -1,10 +1,10 @@
 <template>
   <div class="home flex flex-direction-column justify-content-between">
     <section-profile class="py-5" />
-    <section-skills class="py-5" />
+    <section-skills />
     <section-experiences class="py-5" />
-    <section-contact class="py-5" />
     <section-open-source class="py-5" />
+    <section-contact class="py-5" />
   </div>
 </template>
 
