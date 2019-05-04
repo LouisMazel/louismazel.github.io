@@ -3,7 +3,7 @@ export default {
     return state.contacts
   },
   getToken (state) {
-    return state.token || localStorage.getItem('token')
+    return state.token
   },
   getIsLoggedIn (state) {
     return state.isLoggedIn

@@ -3,11 +3,9 @@ export default {
     state.contacts = val
   },
   SET_TOKEN (state, token) {
-    localStorage.setItem('token', token)
     state.token = token
   },
   RESET_TOKEN (state) {
-    localStorage.removeItem('token')
     state.token = null
   },
   SET_IS_LOGGED_IN (state, val) {

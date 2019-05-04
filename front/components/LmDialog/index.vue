@@ -161,7 +161,7 @@
   }
 
   .modal-header {
-    // background-color: $background-color;
+    background-color: $background-color;
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
     border: none;

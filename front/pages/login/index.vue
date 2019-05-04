@@ -48,9 +48,6 @@
 
 <script>
   import VueInputUi from 'vue-input-ui'
-
-  import { Login } from '@/resources'
-  import { getters, state } from '@/store'
   import { mapActions } from 'vuex'
 
   export default {
@@ -65,24 +62,17 @@
       }
     },
     methods: {
-      ...mapActions(['setToken', 'setIsLoggedIn']),
+      ...mapActions(['authLogin']),
       login () {
-        Login.save({
+        this.authLogin({
           email: this.email,
           password: this.password
         })
-          .then(({ data }) => {
-            this.setToken(data.csrfToken)
-            this.setIsLoggedIn(true)
-            this.$router.push({ name: 'admin' })
+          .then(() => {
+            // this.$router.push({ name: 'admin' })
           })
       }
     }
-    // beforeRouteEnter (to, from, next) {
-    //   console.log('getters', getters['getIsLoggedIn'], state.isLoggedIn)
-    //   const isLoggedIn = getters['getIsLoggedIn']
-    //   isLoggedIn ? next({ name: 'index' }) : next()
-    // }
   }
 </script>
 

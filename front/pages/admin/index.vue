@@ -19,14 +19,10 @@
   import { Contact } from '@/resources'
   import { mapActions, mapGetters } from 'vuex'
   import ContactItem from '@/components/ContactItem'
-  import { getters } from '@/store'
-  import state from '@/store/state'
-
-  import auth from '@/mixins/auth'
 
   export default {
     name: 'Admin',
-    mixins: [auth],
+    middleware: 'admin',
     components: {
       ContactItem
     },
@@ -41,10 +37,5 @@
     methods: {
       ...mapActions(['setContacts'])
     }
-    // beforeRouteEnter (to, from, next) {
-    //   console.log('getters', getters['getIsLoggedIn'], state(), state().isLoggedIn)
-    //   const isLoggedIn = getters['getIsLoggedIn']
-    //   !isLoggedIn ? next({ name: 'login' }) : next()
-    // }
   }
 </script>

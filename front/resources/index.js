@@ -8,7 +8,7 @@ Vue.use(VueResource)
 Vue.http.options.root = config.apiBase[process.env.NODE_ENV]
 
 Vue.http.interceptors.push((request, next) => {
-  const token = getters['getToken'] || localStorage.getItem('token')
+  const token = getters['getToken']
   if (token) {
     request.headers.set('csrf-token', `${token}`)
   }

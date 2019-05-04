@@ -81,7 +81,7 @@
       remove () {
         Contact.delete({ id: this.contact._id })
           .then(() => this.deleteContact(this.contact._id))
-          .catch(() => console.log('error'))
+          .catch((err) => console.log('remove error', err))
       },
       readed () {
         const id = this.contact._id
@@ -95,7 +95,7 @@
           .then(() => {
             this.setContactReaded({ uuid: this.contact._id, value: !this.contact.readed })
           })
-          .catch(() => console.log('error'))
+          .catch((err) => console.log('readed error', err))
       }
     }
   }
