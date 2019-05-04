@@ -1,6 +1,10 @@
 const secrets = {
   dbUri: process.env.DB_URI || 'YOUR_DB_URI',
-  serverport: 4000
+  serverport: 4000,
+  auth: {
+		user: 'YOUR_EMAIL_GMAIL',
+		pass: 'YOUR_GMAIL_PASSWORD'
+	}
 };
 
 const getSecret = (key) => secrets[key];

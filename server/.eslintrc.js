@@ -13,7 +13,7 @@ module.exports = {
     'no-console': 'off',
     indent: [
       'error',
-      'tab'
+      'space'
     ],
     'linebreak-style': [
       'error',

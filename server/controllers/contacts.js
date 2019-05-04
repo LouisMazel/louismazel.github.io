@@ -1,5 +1,5 @@
 const Contact = require('./../models/Contact.js')
-
+const { sendMail } = require('./../mail')
 // Create new Contact
 exports.create = (req, res) => {
 	// Request validation
@@ -21,6 +21,12 @@ exports.create = (req, res) => {
 	contact.save()
 		.then(data => {
 			res.send(data)
+			sendMail({
+				name: req.body.name,
+				email: req.body.email,
+				phone: req.body.phone,
+				message: req.body.message
+			})
 		}).catch(err => {
 			res.status(500).send({
 				message: err.message || 'Something wrong while creating the contact.'
