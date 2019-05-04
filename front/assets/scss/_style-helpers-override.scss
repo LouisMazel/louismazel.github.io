@@ -1,0 +1,53 @@
+@import './_variables';
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  /* stylelint-disable */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  /* stylelint-enable */
+}
+
+.btn {
+  text-decoration: none !important;
+
+  &-rounded {
+    border-radius: 42px;
+  }
+
+  &-sm {
+    font-size: 14px;
+
+    &.btn-rounded {
+      border-radius: 36px;
+    }
+  }
+
+  &-lg {
+    &.btn-rounded {
+      border-radius: 48px;
+    }
+  }
+
+  &-disabled,
+  &:disabled {
+    background-color: $grey-color;
+  }
+}
+
+.text-white-muted {
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.bg-white {
+  background-color: white;
+}
