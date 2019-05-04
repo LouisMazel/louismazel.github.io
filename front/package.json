@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.4.1",
+    "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/robots": "^2.1.0",
     "nuxt": "^2.0.0",
     "nuxt-material-design-icons": "^1.0.4",
@@ -30,6 +31,7 @@
     "vue-input-ui": "^0.2.4",
     "vue-phone-number-input": "^0.1.8",
     "vue-resource": "^1.5.1",
+    "vue-rollbar": "^1.0.0",
     "vue-wait": "^1.3.3"
   },
   "devDependencies": {
